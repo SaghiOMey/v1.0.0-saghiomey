@@ -7,7 +7,8 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 const navigation = [
   { name: "Home", href: "#", current: true },
   { name: " Video Interviews", href: "#", current: false },
-  { name: " Audio Interviews", href: "#", current: false },
+  { name: " Audio English Interviews", href: "#", current: false },
+  { name: " Audio Persian Interviews", href: "#", current: false },
   { name: "Subscribe", href: "#", current: false },
   { name: "About", href: "#", current: false },
 ];
