@@ -1,11 +1,16 @@
 import Header from "./Header";
-import Home from "./Home";
+// import Home from "../Routes/Home";
+// eslint-disable-next-line no-unused-vars
+import { BrowserRouter as Router } from "react-router-dom";
+
 
 function App() {
   return (
     <>
+    <Router>
     <Header />
-    <Home />
+    </Router>
+    {/* <Home /> */}
     </>
   );
 }
