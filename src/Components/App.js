@@ -1,5 +1,4 @@
 import Header from "./Header";
-// import Home from "../Routes/Home";
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -10,7 +9,6 @@ function App() {
     <Router>
     <Header />
     </Router>
-    {/* <Home /> */}
     </>
   );
 }

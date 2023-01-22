@@ -24,12 +24,11 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "VideoInterviews", href: "#", current: false },
-  { name: "AudioEnglishInterviews", href: "#", current: false },
-  { name: "AudioPersianInterviews", href: "#", current: false },
-  // { name: "Subscribe", href: "#", current: false },
-  { name: "About", href: "#", current: false },
+  { name: "Home", link: "/", current: true },
+  { name: "VideoInterviews", link: "VideoInterviews", current: false },
+  { name: "AudioEnglishInterviews", link: "AudioEnglishInterviews", current: false },
+  { name: "AudioPersianInterviews", link: "AudioPersianInterviews", current: false },
+  { name: "About", link: "About", current: false },
 ];
 
 function classNames(...classes) {
@@ -41,6 +40,7 @@ export default function Header() {
 
   const cancelButtonRef = useRef(null)
   return (
+    <div>
     <Disclosure as="nav" style={{ backgroundColor: "#1f2022" }}>
       {({ open }) => (
         <>
@@ -74,7 +74,7 @@ export default function Header() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
-                        to={item.name}
+                        to={item.link}
                         key={item.name}
                         href={item.href}
                         className={({ isActive }) =>
@@ -161,13 +161,6 @@ export default function Header() {
                    </Transition.Root>
                   </div>
                 </div>
-                <Routes>
-                  <Route path="About" element={<About />} />
-                  <Route path="Home" element={<Home />} />
-                  <Route path="VideoInterviews" element={<VideoInterviews />} />
-                  <Route path="AudioEnglishInterviews" element={<AudioEnglishInterviews />} />
-                  <Route path="AudioPersianInterviews" element={<AudioPersianInterviews />} />
-                </Routes>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pt-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
@@ -258,5 +251,13 @@ export default function Header() {
         </>
       )}
     </Disclosure>
+  <Routes>
+  <Route path="About" element={<About />} />
+  <Route path="/" element={<Home />} />
+  <Route path="VideoInterviews" element={<VideoInterviews />} />
+  <Route path="AudioEnglishInterviews" element={<AudioEnglishInterviews />} />
+  <Route path="AudioPersianInterviews" element={<AudioPersianInterviews />} />
+  </Routes>
+    </div>
   );
 }
