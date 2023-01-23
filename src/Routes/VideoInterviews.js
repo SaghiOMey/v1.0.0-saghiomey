@@ -138,7 +138,7 @@ const products = [
 ];
 
 
-export default function VideoInterviews() {
+export default function VideoInterviews(props) {
   return (
     <>
     <div className="relative">

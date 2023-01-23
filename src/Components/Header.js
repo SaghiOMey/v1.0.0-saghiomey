@@ -23,6 +23,8 @@ import AudioPersianInterviews from "../Routes/AudioPersianInterviews";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
+
+
 const navigation = [
   { name: "Home", link: "/", current: true },
   { name: "Video Interviews", link: "VideoInterviews", current: false },
@@ -35,7 +37,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+export default function Header(props) {
   const [Open, setOpen] = useState(false)
 
   const cancelButtonRef = useRef(null)
@@ -253,10 +255,10 @@ export default function Header() {
     </Disclosure>
   <Routes>
   <Route path="About" element={<About />} />
-  <Route path="/" element={<Home />} />
-  <Route path="VideoInterviews" element={<VideoInterviews />} />
-  <Route path="EnglishEpisodes" element={<AudioEnglishInterviews />} />
-  <Route path="PersianEpisodes" element={<AudioPersianInterviews />} />
+  <Route path="/" element={<Home episodes = {props.episodes} />} />
+  <Route path="VideoInterviews" element={<VideoInterviews episodes = {props.episodes} />} />
+  <Route path="EnglishEpisodes" element={<AudioEnglishInterviews episodes = {props.episodes} />} />
+  <Route path="PersianEpisodes" element={<AudioPersianInterviews episodes = {props.episodes} />} />
   </Routes>
     </div>
   );
