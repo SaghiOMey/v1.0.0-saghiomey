@@ -254,7 +254,7 @@ export default function Header(props) {
       )}
     </Disclosure>
   <Routes>
-  <Route path="About" element={<About />} />
+  <Route path="About" element={<About episodes = {props.episodes} />} />
   <Route path="/" element={<Home episodes = {props.episodes} />} />
   <Route path="VideoInterviews" element={<VideoInterviews episodes = {props.episodes} />} />
   <Route path="EnglishEpisodes" element={<AudioEnglishInterviews episodes = {props.episodes} />} />

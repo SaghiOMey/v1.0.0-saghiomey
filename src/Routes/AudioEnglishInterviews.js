@@ -13,6 +13,8 @@ import castbox from "../castbox.svg"
 
 
 export default function AudioEnglishInterviews(props) {
+  const episodes = [...props.episodes].reverse()
+  const lastepisode = props.episodes.slice(-5).reverse();
   return (
     <>
     <div className="relative">
@@ -24,7 +26,7 @@ export default function AudioEnglishInterviews(props) {
       <span className="ml-40 text-4xl font-sans font-bold text-gray-200">Looking for more episodes? Check all of our episodes right here below!</span>
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
-              {props.episodes.map((episode) => (
+              {episodes.map((episode) => (
                 <div key={episode.id} className="group relative">
                   <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                     <img
@@ -86,11 +88,9 @@ export default function AudioEnglishInterviews(props) {
                 <div className="mt-4 text-base font-normal">
                 <a href="#">
                 <ul className="list-disc">
-                  <li className="hover:text-white">Medicine embargo - Shirin Zarafshan</li>
-                  <li className="hover:text-white mt-2">A total of British artists - Shahrzad Akbari</li>
-                  <li className="hover:text-white mt-2">Science - Maryam Jafari </li>
-                  <li className="hover:text-white mt-2">From silence to sound - Peyvand Azad</li>
-                  <li className="hover:text-white mt-2">Flexibility in the workplace - Sara Sadeghian</li>
+                {lastepisode.map((episode) => (
+                    <li className="hover:text-white mt-2">{episode.name}</li>
+                ))}
                 </ul>
                 </a>
                 </div>
