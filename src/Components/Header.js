@@ -25,9 +25,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", link: "/", current: true },
-  { name: "VideoInterviews", link: "VideoInterviews", current: false },
-  { name: "AudioEnglishInterviews", link: "AudioEnglishInterviews", current: false },
-  { name: "AudioPersianInterviews", link: "AudioPersianInterviews", current: false },
+  { name: "Video Interviews", link: "VideoInterviews", current: false },
+  { name: "Audio English Interviews", link: "EnglishEpisodes", current: false },
+  { name: "Audio Persian Interviews", link: "PersianEpisodes", current: false },
   { name: "About", link: "About", current: false },
 ];
 
@@ -255,8 +255,8 @@ export default function Header() {
   <Route path="About" element={<About />} />
   <Route path="/" element={<Home />} />
   <Route path="VideoInterviews" element={<VideoInterviews />} />
-  <Route path="AudioEnglishInterviews" element={<AudioEnglishInterviews />} />
-  <Route path="AudioPersianInterviews" element={<AudioPersianInterviews />} />
+  <Route path="EnglishEpisodes" element={<AudioEnglishInterviews />} />
+  <Route path="PersianEpisodes" element={<AudioPersianInterviews />} />
   </Routes>
     </div>
   );
