@@ -16,7 +16,7 @@ import { Dialog, Transition } from '@headlessui/react'
 
 
 export default function Header(props) {
-  const episodes = [...props.episodes].reverse()
+  const [episodes, setEpisodes] = useState([...props.episodes].reverse().slice(0,9));
   const [open, setOpen] = useState(false)
   const lastepisode = props.episodes.slice(-5).reverse();
   const cancelButtonRef = useRef(null)
@@ -332,7 +332,7 @@ export default function Header(props) {
                 ))}
               </div>
               <div className="mt-16 ml-52">
-                <button class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
+                <button onClick={() => setEpisodes([...props.episodes].reverse().slice(0,episodes.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
                   Load More
                 </button>
               </div>

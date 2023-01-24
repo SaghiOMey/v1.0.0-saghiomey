@@ -6,6 +6,7 @@ import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
+import { useState } from 'react'
 import castbox from "../castbox.svg"
 
 
@@ -13,7 +14,7 @@ import castbox from "../castbox.svg"
 
 
 export default function AudioEnglishInterviews(props) {
-  const episodes = [...props.episodes].reverse()
+  const [episodes, setEpisodes] = useState([...props.episodes].reverse().slice(0,9));
   const lastepisode = props.episodes.slice(-5).reverse();
   return (
     <>
@@ -79,7 +80,7 @@ export default function AudioEnglishInterviews(props) {
               ))}
             </div>
             <div className="mt-16 ml-52">
-              <button class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
+              <button onClick={() => setEpisodes([...props.episodes].reverse().slice(0,episodes.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
                 Load More
               </button>
             </div>
