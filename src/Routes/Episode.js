@@ -14,9 +14,6 @@ import logo from "../saghimey.jpg";
 import castbox from "../castbox.svg"
 import browse from "../browsePodcast.svg";
 import AudioPlayer from 'react-modern-audio-player';
-// eslint-disable-next-line no-unused-vars
-import WaveSurfer from 'wavesurfer.js';
-// import replay10 from "../replay10.svg";
 
 
   
