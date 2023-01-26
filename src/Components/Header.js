@@ -12,6 +12,7 @@ import About from "../Routes/About";
 import Home from "../Routes/Home";
 import Episode from "../Routes/Episode";
 import Persian from "../Routes/Persian";
+import Video from "../Routes/Video";
 import English from "../Routes/English";
 import VideoInterviews from "../Routes/VideoInterviews";
 import { useRef, useState } from 'react';
@@ -260,7 +261,8 @@ export default function Header(props) {
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />
   <Route path="PersianEpisodes/:href" element={<Persian episodes = {props.episodes}  />} />
   <Route path="EnglishEpisodes/:href" element={<English episodes = {props.episodes}  />} />
-  <Route path="VideoInterviews" element={<VideoInterviews episodes = {props.episodes} />} />
+  <Route path="VideoInterviews/:href" element={<Video episodes = {props.episodes}  />} />
+  <Route path="VideoInterviews/*" element={<VideoInterviews episodes = {props.episodes} />} />
   <Route path="EnglishEpisodes/*" element={<AudioEnglishInterviews episodes = {props.episodes} />} />
   <Route path="PersianEpisodes/*" element={<AudioPersianInterviews episodes = {props.episodes} />} />
   </Routes>
