@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import About from "../Routes/About";
 import Home from "../Routes/Home";
 import Episode from "../Routes/Episode";
+import Persian from "../Routes/Persian";
 import VideoInterviews from "../Routes/VideoInterviews";
 import { useRef, useState } from 'react';
 import { Dialog } from '@headlessui/react'
@@ -256,9 +257,10 @@ export default function Header(props) {
   <Route path="About" element={<About episodes = {props.episodes} />} />
   <Route path="/*" element={<Home episodes = {props.episodes} />} />
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />
+  <Route path="PersianEpisodes/:href" element={<Persian episodes = {props.episodes}  />} />
   <Route path="VideoInterviews" element={<VideoInterviews episodes = {props.episodes} />} />
   <Route path="EnglishEpisodes" element={<AudioEnglishInterviews episodes = {props.episodes} />} />
-  <Route path="PersianEpisodes" element={<AudioPersianInterviews episodes = {props.episodes} />} />
+  <Route path="PersianEpisodes/*" element={<AudioPersianInterviews episodes = {props.episodes} />} />
   </Routes>
     </div>
   );

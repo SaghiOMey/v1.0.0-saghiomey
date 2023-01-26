@@ -15,14 +15,11 @@ import castbox from "../castbox.svg"
 import browse from "../browsePodcast.svg";
 import AudioPlayer from 'react-modern-audio-player';
 
-
-  
-
-export default function Episode(props) {
+export default function Persian(props) {
     const { pathname } = useLocation();
     const episodes = [...props.episodes].reverse()
     const lastepisode = props.episodes.slice(-5).reverse();
-    const result = episodes.find(episode => episode.href === pathname.replace('/',''));
+    const result = episodes.find(episode => episode.href === pathname.replace('/PersianEpisodes/',''));
     console.log(result);
     const playList = [
       {
@@ -31,9 +28,10 @@ export default function Episode(props) {
       },
     ]
     console.log(result);
-    return (
-        <>
-        <div className="relative">
+  return (
+    <>
+      <div className="relative">
+      <div className="relative">
           <img className="bg-cover" src={sky} alt="sky" />
           <div className="absolute grid -mt-64 w-full text-white">
           <img
@@ -111,9 +109,13 @@ export default function Episode(props) {
         </div>
           </div>
           <div className="absolute top-2/4 mt-60 w-full min-h-max bg-black">
-          <span className="flex justify-center mt-14"><iframe width="560" height="315" src={result.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
           <div className="mx-auto max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <span className="font-normal font-sans text-white text-2xl">{result.describtion}.</span><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">Listen on</span><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">Anchor-</span>&nbsp;<a href={result.anchor} className="font-normal font-sans text-yellow-500 text-2xl">{result.anchor}</a><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">Spotify-</span>&nbsp;<a href={result.spotify} className="font-normal font-sans text-yellow-500 text-2xl">{result.spotify}</a><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">ApplePodcast-</span>&nbsp;<a href={result.apple} className="font-normal font-sans text-yellow-500 text-2xl">{result.apple}</a><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">CastBox-</span>&nbsp;<a href={result.castbox} className="font-normal font-sans text-yellow-500 text-2xl">{result.castbox}</a><br /><br />
                 <span className="font-normal font-sans text-white text-2xl">You can watch this interview on YouTube</span>&nbsp;<a href={result.youtube} className="font-normal font-sans text-yellow-500 text-2xl">{result.youtube}</a><br /><br />
                 <span className="font-normal font-sans text-white text-2xl">Follow us on Social Media for the latest show updates</span><br /><br />
                 <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Twitter</a><br /><br />
@@ -170,6 +172,7 @@ export default function Episode(props) {
           </div>
           </div>
         </div>
-        </>
-    );
-  }
+        </div>
+    </>
+  );
+}
