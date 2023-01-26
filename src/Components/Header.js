@@ -78,7 +78,6 @@ export default function Header(props) {
                       <NavLink
                         to={item.link}
                         key={item.name}
-                        href={item.href}
                         className={({ isActive }) =>
                           isActive
                             ? "bg-gray-900 text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"

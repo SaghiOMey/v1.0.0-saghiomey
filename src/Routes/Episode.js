@@ -23,9 +23,10 @@ export default function Episode(props) {
     const episodes = [...props.episodes].reverse()
     const lastepisode = props.episodes.slice(-5).reverse();
     const result = episodes.find(episode => episode.href === pathname.replace('/',''));
+    console.log(result);
     const playList = [
       {
-        src: 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2023-0-21/308596164-22050-1-b9602b6190fc7.m4a',
+        src: result.voice,
         id: 1,
       },
     ]
@@ -92,14 +93,34 @@ export default function Episode(props) {
         }}
       />
         </div>
-        <span className="flex -mt-64 justify-self-center -mt-44 -ml-80 text-gray-300 font-medium">Hosted By</span><br />
-        <span className="flex -mt-64 justify-self-center -mt-40 -ml-80 font-normal">Milad</span>
-        {/* <div></div> */}
+        <span className="flex justify-self-center -mt-44 -ml-80 text-gray-300 font-semibold">Hosted By</span><br />
+        <span className="flex justify-self-center -mt-40 -ml-80 font-medium h-8">Milad</span>
+        <div className="flex justify-self-center gap-3 -mt-32 ml-12">
+          <a href="#" className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
+           <img src={youtube} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
+           <span className="text-black font-bold text-base mt-3 hover:text-white">YouTube</span>
+          </a>
+          <a href="#" className="flex bg-white h-12 w-44 rounded hover:bg-opacity-0">
+           <img src={apple} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
+           <span className="text-black font-bold text-base mt-3 hover:text-white">Apple Podcasts</span>
+          </a>
+          <a href="#" className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
+           <img src={spotify} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
+           <span className="text-black font-bold text-base mt-3 hover:text-white">Spotify</span>
+          </a>
+        </div>
           </div>
           <div className="absolute top-2/4 mt-60 w-full min-h-max bg-black">
-          <span className="ml-40 text-4xl font-sans font-bold text-gray-200">Looking for more episodes? Check all of our episodes right here below!</span>
+          <span className="flex justify-center mt-14"><iframe width="560" height="315" src={result.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
           <div className="mx-auto max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                
+                <span className="font-normal font-sans text-white text-2xl">{result.describtion}.</span><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">You can watch this interview on YouTube&nbsp;<a href="#" className="font-normal font-sans text-yellow-500 text-2xl">https://youtu.be/u45BvEmdPt0</a></span><br /><br />
+                <span className="font-normal font-sans text-white text-2xl">Follow us on Social Media for the latest show updates</span><br /><br />
+                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Twitter</a><br /><br />
+                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Instagram</a><br /><br />
+                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Facebook</a><br /><br />
+                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">SaghiOMey</a><br /><br />
+                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">YouTube</a><br /><br />
                 <div className="flex mt-36 justify-between">
                     <span className="text-gray-300 text-lg font-medium">Recent Episodes
                     <div className="mt-4 text-base font-normal">
