@@ -15,7 +15,8 @@ import castbox from "../castbox.svg"
 
 
 export default function AudioPersianInterviews(props) {
-  const [episodes, setEpisodes] = useState([...props.episodes].reverse().slice(0,9));
+  const persian = [...props.episodes].reverse().filter(p => p.ln === "pa");
+  const [episodes, setEpisodes] = useState(persian.slice(0,9));
   const lastepisode = props.episodes.slice(-5).reverse();
     return (
       <>

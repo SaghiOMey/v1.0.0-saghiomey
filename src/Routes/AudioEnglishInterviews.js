@@ -7,6 +7,7 @@ import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
 import { useState } from 'react'
+import { NavLink } from "react-router-dom";
 import castbox from "../castbox.svg"
 
 
@@ -14,7 +15,8 @@ import castbox from "../castbox.svg"
 
 
 export default function AudioEnglishInterviews(props) {
-  const [episodes, setEpisodes] = useState([...props.episodes].reverse().slice(0,9));
+  const englishs = [...props.episodes].reverse().filter(p => p.ln === "en");
+  const [episodes, setEpisodes] = useState(englishs.slice(0,9));
   const lastepisode = props.episodes.slice(-5).reverse();
   return (
     <>
@@ -28,6 +30,7 @@ export default function AudioEnglishInterviews(props) {
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
               {episodes.map((episode) => (
+                <NavLink to={`${episode.href}`}>
                 <div key={episode.id} className="group relative">
                   <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                     <img
@@ -77,6 +80,7 @@ export default function AudioEnglishInterviews(props) {
                     </div>
                   </div>
                 </div>
+                </NavLink>
               ))}
             </div>
             <div className="mt-16 ml-52">
