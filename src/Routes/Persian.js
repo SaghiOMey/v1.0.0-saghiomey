@@ -94,7 +94,7 @@ export default function Persian(props) {
         <span className="flex justify-self-center -mt-44 -ml-80 text-gray-300 font-semibold">Hosted By</span><br />
         <span className="flex justify-self-center -mt-40 -ml-80 font-medium h-8">Milad</span>
         <div className="flex justify-self-center gap-3 -mt-32 ml-12">
-          <a href="#" className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
+          <a href={result.youtube} className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
            <img src={youtube} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-base mt-3 hover:text-white">YouTube</span>
           </a>
@@ -102,7 +102,7 @@ export default function Persian(props) {
            <img src={apple} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-base mt-3 hover:text-white">Apple Podcasts</span>
           </a>
-          <a href="#" className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
+          <a href={result.spotify} className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
            <img src={spotify} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-base mt-3 hover:text-white">Spotify</span>
           </a>

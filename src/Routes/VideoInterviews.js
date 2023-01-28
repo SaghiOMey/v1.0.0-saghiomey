@@ -31,7 +31,7 @@ export default function VideoInterviews(props) {
             {ep.length > episodes.length ?
                 <> 
                 {episodes.slice(0,9).map((episode) => ( 
-                  <NavLink to={`/${episode.href}`}>
+                  <NavLink to={`${episode.href}`}>
                   <div key={episode.id} className="group relative">
                     <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                       <img
@@ -87,7 +87,7 @@ export default function VideoInterviews(props) {
                 : 
                 <>
                 {ep.map((episode) => ( 
-                  <NavLink to={`/${episode.href}`}>
+                  <NavLink to={`${episode.href}`}>
                   <div key={episode.id} className="group relative">
                     <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                       <img
