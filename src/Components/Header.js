@@ -26,6 +26,8 @@ import AudioEnglishInterviews from "../Routes/AudioEnglishInterviews";
 import AudioPersianInterviews from "../Routes/AudioPersianInterviews";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Profile from "../Routes/Profile";
+import Reviews from "../Routes/Reviews";
 
 
 
@@ -134,19 +136,19 @@ export default function Header(props) {
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
                         <div className="flex mt-4 ml-6 justify-between">
-                  <a href="#">
+                  <a href="https://www.youtube.com/@Saghiomey?sub_confirmation=1">
                     <img src={youtube} className="h-12 w-12 rounded-full" />
                   </a>
                   <a href="#">
                     <img src={apple} className="h-12 w-12" />
                   </a>
-                  <a href="#">
+                  <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
                     <img src={spotify} className="h-12 w-12" />
                   </a>
-                  <a href="#">
+                  <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw%3D%3D">
                     <img src={googlepodcast} className="h-12 w-12" />
                   </a>
-                  <a href="#">
+                  <a href="https://castbox.fm/channel/Saghi.O.Mey-%7C%7C-%D8%B3%D8%A7%D9%82%DB%8C-%D9%88-%D9%85%DB%8C-id4931691?country=gb">
                     <img src={castbox} className="h-12 w-12" />
                   </a>
                   </div>
@@ -214,29 +216,29 @@ export default function Header(props) {
                       <Menu.Item>
                         {({ active }) => (
                           // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                          <a
-                            href="#"
+                          <NavLink
+                            to="Profile"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
                             Profile
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           // eslint-disable-next-line jsx-a11y/anchor-is-valid
-                          <a
-                            href="#"
+                          <NavLink
+                            to="Reviews"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
                             )}
                           >
                             Reviews
-                          </a>
+                          </NavLink>
                         )}
                       </Menu.Item>
                     </Menu.Items>
@@ -270,6 +272,8 @@ export default function Header(props) {
       )}
     </Disclosure>
   <Routes>
+  <Route path="Profile" element={<Profile  />} />
+  <Route path="Reviews" element={<Reviews  />} />
   <Route path="About" element={<About episodes = {props.episodes} />} />
   <Route path="/*" element={<Home episodes = {filterNames} episode = {props.episodes} />} />
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />
