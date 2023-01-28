@@ -15,7 +15,8 @@ import castbox from "../castbox.svg"
 
 
 export default function VideoInterviews(props) {
-  const [episodes, setEpisodes] = useState([...props.episodes].reverse().slice(0,9));
+  const episodes = [...props.episodes].reverse()
+  const [ep, setEp] = useState(episodes.slice(0,9));
   const lastepisode = props.episodes.slice(-5).reverse();
   return (
     <>
@@ -27,62 +28,122 @@ export default function VideoInterviews(props) {
       <div className="absolute top-2/4 mt-32 w-full min-h-max bg-black">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
-              {episodes.map((episode) => (
-                <NavLink to={`${episode.href}`}>
-                <div key={episode.id} className="group relative">
-                  <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
-                    <img
-                      src={logo}
-                      alt={episode.imageAlt}
-                      className="h-full w-full lg:mt-4 lg:ml-24 lg:h-1/2 lg:w-1/2 rounded"
-                    />
-                    <div className="mt-4 mb-8">
-                      <div>
-                        <h3 className="text-sm text-zinc-300">
-                          <a href={episode.href} className="flex ml-28">
-                            <span
-                              aria-hidden="true"
-                              className="absolute inset-0"
-                            />
-                            <a className="text-zinc-300 fill-current">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="17"
-                                height="17"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z" />
-                              </svg>
+            {ep.length > episodes.length ?
+                <> 
+                {episodes.slice(0,9).map((episode) => ( 
+                  <NavLink to={`/${episode.href}`}>
+                  <div key={episode.id} className="group relative">
+                    <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
+                      <img
+                        src={logo}
+                        alt={episode.imageAlt}
+                        className="h-full w-full lg:mt-4 lg:ml-24 lg:h-1/2 lg:w-1/2 rounded"
+                      />
+                      <div className="mt-4 mb-8">
+                        <div>
+                          <h3 className="text-sm text-zinc-300">
+                            <a href={episode.href} className="flex ml-28">
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0"
+                              />
+                              <a className="text-zinc-300 fill-current">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="17"
+                                  height="17"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z" />
+                                </svg>
+                              </a>
+                              &nbsp;{episode.date}&nbsp;&nbsp;
+                              <a className="text-zinc-300 fill-current">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="19"
+                                  height="19"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M13 12l-.688-4h-.609l-.703 4c-.596.347-1 .984-1 1.723 0 1.104.896 2 2 2s2-.896 2-2c0-.739-.404-1.376-1-1.723zm-1-8c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2-19.819v-2.181h4v2.181c-1.438-.243-2.592-.238-4 0zm9.179 2.226l1.407-1.407 1.414 1.414-1.321 1.321c-.462-.484-.964-.926-1.5-1.328z" />
+                                </svg>
+                              </a>
+                              &nbsp;{episode.time}
                             </a>
-                            &nbsp;{episode.date}&nbsp;&nbsp;
-                            <a className="text-zinc-300 fill-current">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="19"
-                                height="19"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M13 12l-.688-4h-.609l-.703 4c-.596.347-1 .984-1 1.723 0 1.104.896 2 2 2s2-.896 2-2c0-.739-.404-1.376-1-1.723zm-1-8c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2-19.819v-2.181h4v2.181c-1.438-.243-2.592-.238-4 0zm9.179 2.226l1.407-1.407 1.414 1.414-1.321 1.321c-.462-.484-.964-.926-1.5-1.328z" />
-                              </svg>
-                            </a>
-                            &nbsp;{episode.time}
-                          </a>
-                        </h3>
-                        <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-yellow-500">
-                          {episode.name}
+                          </h3>
+                          <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-yellow-500">
+                            {episode.name}
+                          </p>
+                        </div>
+                        <p className="text-sm mt-1 ml-4 mr-1 font-medium text-gray-500">
+                          {episode.describtion}
                         </p>
                       </div>
-                      <p className="text-sm mt-1 ml-4 mr-1 font-medium text-gray-500">
-                        {episode.describtion}
-                      </p>
                     </div>
                   </div>
-                </div>
-                </NavLink>
-              ))}
+                  </NavLink>
+                ))}
+                </>
+                : 
+                <>
+                {ep.map((episode) => ( 
+                  <NavLink to={`/${episode.href}`}>
+                  <div key={episode.id} className="group relative">
+                    <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
+                      <img
+                        src={logo}
+                        alt={episode.imageAlt}
+                        className="h-full w-full lg:mt-4 lg:ml-24 lg:h-1/2 lg:w-1/2 rounded"
+                      />
+                      <div className="mt-4 mb-8">
+                        <div>
+                          <h3 className="text-sm text-zinc-300">
+                            <a href={episode.href} className="flex ml-28">
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0"
+                              />
+                              <a className="text-zinc-300 fill-current">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="17"
+                                  height="17"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z" />
+                                </svg>
+                              </a>
+                              &nbsp;{episode.date}&nbsp;&nbsp;
+                              <a className="text-zinc-300 fill-current">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="19"
+                                  height="19"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M13 12l-.688-4h-.609l-.703 4c-.596.347-1 .984-1 1.723 0 1.104.896 2 2 2s2-.896 2-2c0-.739-.404-1.376-1-1.723zm-1-8c-5.522 0-10 4.477-10 10s4.478 10 10 10 10-4.477 10-10-4.478-10-10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2-19.819v-2.181h4v2.181c-1.438-.243-2.592-.238-4 0zm9.179 2.226l1.407-1.407 1.414 1.414-1.321 1.321c-.462-.484-.964-.926-1.5-1.328z" />
+                                </svg>
+                              </a>
+                              &nbsp;{episode.time}
+                            </a>
+                          </h3>
+                          <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-yellow-500">
+                            {episode.name}
+                          </p>
+                        </div>
+                        <p className="text-sm mt-1 ml-4 mr-1 font-medium text-gray-500">
+                          {episode.describtion}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  </NavLink>
+                ))}
+                </>
+                }
             </div>
             <div className="mt-16 ml-52">
-              <button onClick={() => setEpisodes([...props.episodes].reverse().slice(0,episodes.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
+              <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
                 Load More
               </button>
             </div>

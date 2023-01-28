@@ -30,20 +30,28 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 
 const navigation = [
-  { name: "Home", link: "/", current: true },
-  { name: "Video Interviews", link: "VideoInterviews", current: false },
-  { name: "Audio English Interviews", link: "EnglishEpisodes", current: false },
-  { name: "Audio Persian Interviews", link: "PersianEpisodes", current: false },
-  { name: "About", link: "About", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "Video Interviews", href: "VideoInterviews", current: false },
+  { name: "Audio English Interviews", href: "EnglishEpisodes", current: false },
+  { name: "Audio Persian Interviews", href: "PersianEpisodes", current: false },
+  { name: "About", href: "About", current: false },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
 export default function Header(props) {
   const [Open, setOpen] = useState(false)
+  const [Search, setSearch] = useState(false)
+  let [Name, setName] = useState("")
+  const handleChange = (e) => {
+    setName (e.target.value);
+  }
+  const filterNames = props.episodes.filter((episodes) => episodes.name.toLowerCase().includes(Name.toLowerCase()))
   const cancelButtonRef = useRef(null)
+ 
   return (
     <div>
     <Disclosure as="nav" style={{ backgroundColor: "#1f2022" }}>
@@ -79,7 +87,7 @@ export default function Header(props) {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
-                        to={item.link}
+                        to={item.href}
                         key={item.name}
                         className={({ isActive }) =>
                           isActive
@@ -167,14 +175,20 @@ export default function Header(props) {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pt-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {Search ? 
+              <input type="search" onChange={handleChange} value={Name} class="form-control relative flex-auto min-w-0 block w-32 px-3 py-1.5 text-base font-normal bg-inherit text-gray-200 bg-clip-padding border-b border-solid border-b-yellow-500 transition ease-in-out m-0 focus:text-gray-200 focus:border-b-yellow-600	 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
+                : null }
                 <button
+                  onClick={() => setSearch(!Search)}
                   type="button"
-                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                  </svg>
                 </button>
-
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
@@ -257,14 +271,14 @@ export default function Header(props) {
     </Disclosure>
   <Routes>
   <Route path="About" element={<About episodes = {props.episodes} />} />
-  <Route path="/*" element={<Home episodes = {props.episodes} />} />
+  <Route path="/*" element={<Home episodes = {filterNames} episode = {props.episodes} />} />
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />
   <Route path="PersianEpisodes/:href" element={<Persian episodes = {props.episodes}  />} />
   <Route path="EnglishEpisodes/:href" element={<English episodes = {props.episodes}  />} />
   <Route path="VideoInterviews/:href" element={<Video episodes = {props.episodes}  />} />
-  <Route path="VideoInterviews/*" element={<VideoInterviews episodes = {props.episodes} />} />
+  <Route path="VideoInterviews/*" element={<VideoInterviews episodes = {filterNames} episode = {props.episodes} />} />
   <Route path="EnglishEpisodes/*" element={<AudioEnglishInterviews episodes = {props.episodes} />} />
-  <Route path="PersianEpisodes/*" element={<AudioPersianInterviews episodes = {props.episodes} />} />
+  <Route path="PersianEpisodes/*" element={<AudioPersianInterviews episodes = {filterNames} episode = {props.episodes} />} />
   </Routes>
     </div>
   );
