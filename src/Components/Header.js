@@ -46,7 +46,7 @@ export default function Header(props) {
   }
   const filterNames = props.episodes.filter((episodes) => episodes.name.toLowerCase().includes(Name.toLowerCase()))
   const cancelButtonRef = useRef(null)
-  
+
   let navigation = [
     { name: "Home", href: "/", current: false },
     { name: "Video Interviews", href: "VideoInterviews", current: false },
@@ -57,10 +57,14 @@ export default function Header(props) {
 
   function current() {
     let result = navigation.find(item => item.href === pathname ? item.href : item.href === pathname.replace('/',''));
-    result.current = true
+    if(result) {
+      result.current = true
+    } else {
+      result = pathname
+    }
     return navigation = navigation.map(nav => nav.href === result.href ? result : nav)
   }
-
+console.log(current());
 
   return (
     <div>
