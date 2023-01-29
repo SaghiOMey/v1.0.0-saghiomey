@@ -7,7 +7,7 @@ import profile from "../profile.jpg";
 // eslint-disable-next-line no-unused-vars
 import { Routes, Route } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import About from "../Routes/About";
 import Home from "../Routes/Home";
 import Episode from "../Routes/Episode";
@@ -31,20 +31,13 @@ import Reviews from "../Routes/Reviews";
 
 
 
-const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Video Interviews", href: "VideoInterviews", current: false },
-  { name: "Audio English Interviews", href: "EnglishEpisodes", current: false },
-  { name: "Audio Persian Interviews", href: "PersianEpisodes", current: false },
-  { name: "About", href: "About", current: false },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 
 export default function Header(props) {
+  const { pathname } = useLocation();
   const [Open, setOpen] = useState(false)
   const [Search, setSearch] = useState(false)
   let [Name, setName] = useState("")
@@ -53,7 +46,22 @@ export default function Header(props) {
   }
   const filterNames = props.episodes.filter((episodes) => episodes.name.toLowerCase().includes(Name.toLowerCase()))
   const cancelButtonRef = useRef(null)
- 
+  
+  let navigation = [
+    { name: "Home", href: "/", current: false },
+    { name: "Video Interviews", href: "VideoInterviews", current: false },
+    { name: "Audio English Interviews", href: "EnglishEpisodes", current: false },
+    { name: "Audio Persian Interviews", href: "PersianEpisodes", current: false },
+    { name: "About", href: "About", current: false },
+  ];
+
+  function current() {
+    let result = navigation.find(item => item.href === pathname ? item.href : item.href === pathname.replace('/',''));
+    result.current = true
+    return navigation = navigation.map(nav => nav.href === result.href ? result : nav)
+  }
+
+
   return (
     <div>
     <Disclosure as="nav" style={{ backgroundColor: "#1f2022" }}>
@@ -253,11 +261,12 @@ export default function Header(props) {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as={NavLink}
+                  to={item.href}
+                  onClick={current()}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
+                      ? "bg-gray-900 text-yellow-500"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
