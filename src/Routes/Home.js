@@ -178,9 +178,9 @@ export default function Header(props) {
               </p>
               <p className="font-mono flex font-bold ml-80 mt-8 text-lg text-gray-100">
                 Reviews: &nbsp;
-                <a
+                <NavLink
                   className="text-yellow-500 mt-1 flex hover:text-white fill-current"
-                  href="#"
+                  to="Reviews"
                 >
                   <svg
                     clip-rule="evenodd"
@@ -261,7 +261,7 @@ export default function Header(props) {
                       fill-rule="nonzero"
                     />
                   </svg>
-                </a>
+                </NavLink>
               </p>
             </div>
           </div>
