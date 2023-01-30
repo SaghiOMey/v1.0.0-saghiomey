@@ -4,12 +4,36 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
+import { Fragment, useState, useRef } from "react";
 import { useLocation } from "react-router-dom"
+import { Dialog } from '@headlessui/react'
+import { Transition } from "@headlessui/react";
 import sky from "../sky.jpg";
 import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
+import share from "../share.svg";
+import copy from "../copy.svg";
+import done from "../done.svg";
 import googlepodcast from "../googlepodcast.svg";
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  PinterestShareButton,
+  PinterestIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  RedditShareButton,
+  RedditIcon,
+  EmailShareButton,
+  EmailIcon,
+} from "react-share";
 // import logo from "../saghimey.jpg";
 import castbox from "../castbox.svg"
 import browse from "../browsePodcast.svg";
@@ -19,6 +43,9 @@ import AudioPlayer from 'react-modern-audio-player';
   
 
 export default function Episode(props) {
+    const [Open, setOpen] = useState(false)
+    const [isCopied, setIsCopied] = useState();
+    const cancelButtonRef = useRef(null)
     const { pathname } = useLocation();
     const episodes = [...props.episodes].reverse()
     const lastepisode = props.episodes.slice(-5).reverse();
@@ -92,6 +119,101 @@ export default function Episode(props) {
           progress: "sortable",
         }}
       />
+      <button onClick={() => setOpen(true)}>
+        <img src={share} className="mt-1 ml-4 h-10 w-10" />
+      </button>
+      <Transition.Root show={Open} as={Fragment}>
+                   <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        </Transition.Child>
+
+        <div className="fixed inset-0 z-10 overflow-y-auto">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              enterTo="opacity-100 translate-y-0 sm:scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            >
+              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-black text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                <div className="bg-black px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div className="sm:flex sm:items-start">
+                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <Dialog.Title as="h3" className="text-lg flex font-semibold leading-6 text-gray-200">
+                        <img src={result.img} alt="logo" className="w-1/4 rounded" />
+                      <span className="ml-4">{result.name}</span>
+                      </Dialog.Title>
+                      <div className="flex justify-between mt-8">
+                      <TwitterShareButton url={pathname}>
+                      <TwitterIcon size={40} round={true} />
+                      </TwitterShareButton>
+                      <FacebookShareButton url={pathname}n>
+                        <FacebookIcon size={40} round={true} />
+                      </FacebookShareButton>
+                      <LinkedinShareButton url={pathname}n>
+                        <LinkedinIcon size={40} round={true} />
+                      </LinkedinShareButton>
+                      <PinterestShareButton url={pathname}n>
+                        <PinterestIcon size={40} round={true} />
+                      </PinterestShareButton>
+                      </div>
+                      <div className="flex justify-between mt-8">
+                      <WhatsappShareButton url={pathname}n>
+                        <WhatsappIcon size={40} round={true} />
+                      </WhatsappShareButton>
+                      <TelegramShareButton url={pathname}n>
+                        <TelegramIcon size={40} round={true} />
+                      </TelegramShareButton>
+                      <RedditShareButton url={pathname}n>
+                        <RedditIcon size={40} round={true} />
+                      </RedditShareButton>
+                      <EmailShareButton url={pathname}n>
+                        <EmailIcon size={40} round={true} />
+                      </EmailShareButton>
+                      </div>
+                      <div className="flex mt-8 items-center">                     
+                        <div class="relative w-full">
+                          <input value={pathname} type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
+                        </div>
+                        <button onClick={() => setIsCopied(navigator.clipboard.writeText(pathname))} type="submit" class="p-2.5 ml-2 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        {isCopied ? 
+                        <img src={done} />
+                        :
+                        <img src={copy} />
+                        }
+                        </button>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-black px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                  <button
+                    type="button"
+                    className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                    onClick={() => setOpen(false)}
+                    ref={cancelButtonRef}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+                   </Dialog>
+      </Transition.Root>
         </div>
         <span className="flex justify-self-center -mt-44 -ml-80 text-gray-300 font-semibold">Hosted By</span><br />
         <span className="flex justify-self-center -mt-40 -ml-80 font-medium h-8">Milad</span>
