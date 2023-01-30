@@ -24,7 +24,9 @@ export default function Reviews(props) {
           <span className="text-5xl font-sans font-bold">Reviews</span>
         </div>
         <div className="absolute top-2/4 mt-32 w-full min-h-max bg-black">
+        {persian.length > 0 ?
         <span className="ml-40 text-4xl font-sans font-bold text-gray-200">Read reviews about our podcast below!</span>
+        : ""}
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
               {ep.length > persian.length ?
@@ -319,11 +321,14 @@ export default function Reviews(props) {
                 </>
                 }
               </div>
+              {persian.length > 0 ?
               <div className="mt-16 ml-52">
                 <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
                   Load More
                 </button>
-              </div>      
+              </div>
+              : <span className="flex text-gray-200 justify-center text-xl font-semibold">Your search returned no results, please try again</span>
+              }      
               <div className="flex mt-36 justify-between">
                   <span className="text-gray-300 text-lg font-medium">Recent Episodes
                   <div className="mt-4 text-base font-normal">

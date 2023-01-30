@@ -397,11 +397,14 @@ export default function Header(props) {
                 </>
                 }
               </div>
+              {episodes.length > 0 ?
               <div className="mt-16 ml-52">
                 <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
                   Load More
                 </button>
               </div>
+              : <span className="flex text-gray-200 justify-center text-xl font-semibold">Your search returned no results, please try again</span>
+               }
               <div className="flex mt-36 justify-between">
                   <span className="text-gray-300 text-lg font-medium">Recent Episodes
                   <div className="mt-4 text-base font-normal">
