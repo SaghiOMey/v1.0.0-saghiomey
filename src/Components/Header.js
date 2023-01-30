@@ -286,7 +286,7 @@ console.log(current());
     </Disclosure>
   <Routes>
   <Route path="Profile" element={<Profile episode = {props.episodes} />} />
-  <Route path="Reviews" element={<Reviews  />} />
+  <Route path="Reviews" element={<Reviews episodes = {filterNames} episode = {props.episodes}  />} />
   <Route path="About" element={<About episodes = {props.episodes} />} />
   <Route path="/*" element={<Home episodes = {filterNames} episode = {props.episodes} />} />
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />

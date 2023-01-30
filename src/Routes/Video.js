@@ -10,7 +10,7 @@ import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
-import logo from "../saghimey.jpg";
+// import logo from "../saghimey.jpg";
 import castbox from "../castbox.svg"
 
 
@@ -32,7 +32,7 @@ export default function Persian(props) {
           <img className="bg-cover" src={sky} alt="sky" />
           <div className="absolute grid -mt-64 w-full text-white">
           <img
-            src={logo}
+            src={result.img}
             alt="logo"
             className="w-64 -mt-48 ml-20 rounded"
            />

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import logo from "../saghimey.jpg";
+// import logo from "../saghimey.jpg";
 import nightsky from "../nightsky.jpg";
 import apple from "../apple.svg";
 import youtube from "../youtube.svg";
@@ -37,7 +37,7 @@ export default function AudioEnglishInterviews(props) {
                   <div key={episode.id} className="group relative">
                     <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                       <img
-                        src={logo}
+                        src={episode.img}
                         alt={episode.imageAlt}
                         className="h-full w-full lg:mt-4 lg:ml-24 lg:h-1/2 lg:w-1/2 rounded"
                       />
@@ -93,7 +93,7 @@ export default function AudioEnglishInterviews(props) {
                   <div key={episode.id} className="group relative">
                     <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                       <img
-                        src={logo}
+                        src={episode.img}
                         alt={episode.imageAlt}
                         className="h-full w-full lg:mt-4 lg:ml-24 lg:h-1/2 lg:w-1/2 rounded"
                       />
