@@ -54,7 +54,7 @@ export default function Persian(props) {
         id: 1,
       },
     ]
-    console.log(result);
+    
   return (
     <>
       <div className="relative">
@@ -154,38 +154,38 @@ export default function Persian(props) {
                       <span className="ml-4">{result.name}</span>
                       </Dialog.Title>
                       <div className="flex justify-between mt-8">
-                      <TwitterShareButton url={pathname}>
+                      <TwitterShareButton url={result.eplink}>
                       <TwitterIcon size={40} round={true} />
                       </TwitterShareButton>
-                      <FacebookShareButton url={pathname}n>
+                      <FacebookShareButton url={result.eplink}n>
                         <FacebookIcon size={40} round={true} />
                       </FacebookShareButton>
-                      <LinkedinShareButton url={pathname}n>
+                      <LinkedinShareButton url={result.eplink}n>
                         <LinkedinIcon size={40} round={true} />
                       </LinkedinShareButton>
-                      <PinterestShareButton url={pathname}n>
+                      <PinterestShareButton url={result.eplink}n>
                         <PinterestIcon size={40} round={true} />
                       </PinterestShareButton>
                       </div>
                       <div className="flex justify-between mt-8">
-                      <WhatsappShareButton url={pathname}n>
+                      <WhatsappShareButton url={result.eplink}n>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <TelegramShareButton url={pathname}n>
+                      <TelegramShareButton url={result.eplink}n>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
-                      <RedditShareButton url={pathname}n>
+                      <RedditShareButton url={result.eplink}n>
                         <RedditIcon size={40} round={true} />
                       </RedditShareButton>
-                      <EmailShareButton url={pathname}n>
+                      <EmailShareButton url={result.eplink}n>
                         <EmailIcon size={40} round={true} />
                       </EmailShareButton>
                       </div>
                       <div className="flex mt-8 items-center">                     
                         <div class="relative w-full">
-                          <input value={pathname} type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
+                          <input value={result.eplink} type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled />
                         </div>
-                        <button onClick={() => setIsCopied(navigator.clipboard.writeText(pathname))} type="submit" class="p-2.5 ml-2 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <button onClick={() => setIsCopied(navigator.clipboard.writeText(result.eplink))} type="submit" class="p-2.5 ml-2 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         {isCopied ? 
                         <img src={done} />
                         :
