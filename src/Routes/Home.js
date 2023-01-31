@@ -28,7 +28,7 @@ export default function Header(props) {
     <>
       <div className="relative">
         <img className="bg-cover" src={Desert} alt="Desert" />
-        <div className="absolute top-44 left-20 lg:top-40 md:top-12 md:left-1/2">
+        <div className="absolute top-44 left-20 lg:top-36 md:top-12 md:left-1/2">
           <div className="font-mono font-bold text-xs md:text-4xl text-white">
             Podcast SaghiOMey{" "}
           </div>
@@ -43,12 +43,12 @@ export default function Header(props) {
         <div className="absolute md:flex md:justify-between top-4 left-20 xl:top-80 lg:top-60 md:top-44">
           <img className="h-40 md:h-1/4 md:w-1/4 rounded" src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded/22745765/22745765-1673944612760-1d57f610e6e73.jpg" alt="logo" />
           <div className="mt-16 -ml-20 h-72 lg:h-auto md:h-44 md:m-0 md:flex md:flex-1 md:items-start md:justify-center bg-black">
-            <div className="font-mono font-bold ml-6 text-xs md:text-lg text-gray-100">
+            <div className="font-mono font-bold ml-6 text-xs lg:text-xs xl:text-lg text-gray-100">
               Join Host Milad as he talks to various guests each week where
               ”Everyone Has A Story” from the world.
               <br />
               <br />
-              <button onClick={() => setOpen(true)} class="bg-white text-black w-36 h-8 lg:w-3/12 md:w-60 md:h-16 lg:ml-80 md:ml-32 rounded-full hover:bg-yellow-500 hover:text-white">
+              <button onClick={() => setOpen(true)} class="bg-white text-black w-36 h-8 lg:w-3/12 md:w-40 md:h-8 lg:w-60 lg:h-16 lg:ml-80 md:ml-32 rounded-full hover:bg-yellow-500 hover:text-white">
                 Subscribe to Podcast
               </button>
               <Transition.Root show={open} as={Fragment}>
