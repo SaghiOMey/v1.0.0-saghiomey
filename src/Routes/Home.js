@@ -27,16 +27,28 @@ export default function Header(props) {
   return (
     <>
       <div className="relative">
-        {/* <img className="bg-cover" src={Desert} alt="Desert" />
-        <div className="absolute flex justify-between left-32 top-80">
-          <img className="h-1/4 w-1/4 rounded" src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded/22745765/22745765-1673944612760-1d57f610e6e73.jpg" alt="logo" />
-          <div className="flex flex-1 items-start justify-center bg-black">
-            <div className="font-mono font-bold ml-6 text-lg text-gray-100">
+        <img className="bg-cover" src={Desert} alt="Desert" />
+        <div className="absolute top-44 left-20 lg:top-40 md:top-12 md:left-1/2">
+          <div className="font-mono font-bold text-xs md:text-4xl text-white">
+            Podcast SaghiOMey{" "}
+          </div>
+          <span className="font-mono md:font-bold text-xs md:pl-28 md:text-xl text-white">
+            Hosted By
+          </span>
+          <br />
+          <span className="font-mono font-bold text-xs md:pl-32 md:text-xl text-white">
+            Milad
+          </span>
+        </div>
+        <div className="absolute md:flex md:justify-between top-4 left-20 xl:top-80 lg:top-60 md:top-44">
+          <img className="h-40 md:h-1/4 md:w-1/4 rounded" src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded/22745765/22745765-1673944612760-1d57f610e6e73.jpg" alt="logo" />
+          <div className="mt-16 -ml-20 h-72 lg:h-auto md:h-44 md:m-0 md:flex md:flex-1 md:items-start md:justify-center bg-black">
+            <div className="font-mono font-bold ml-6 text-xs md:text-lg text-gray-100">
               Join Host Milad as he talks to various guests each week where
               ”Everyone Has A Story” from the world.
               <br />
               <br />
-              <button onClick={() => setOpen(true)} class="bg-white text-black w-3/12 h-16 ml-80 rounded-full hover:bg-yellow-500 hover:text-white">
+              <button onClick={() => setOpen(true)} class="bg-white text-black w-36 h-8 lg:w-3/12 md:w-60 md:h-16 lg:ml-80 md:ml-32 rounded-full hover:bg-yellow-500 hover:text-white">
                 Subscribe to Podcast
               </button>
               <Transition.Root show={open} as={Fragment}>
@@ -108,7 +120,7 @@ export default function Header(props) {
               <br />
               <br />
               <br />
-              <p className="font-mono flex font-bold ml-56 text-lg text-gray-100">
+              <p className="font-mono flex font-bold lg:ml-56 lg:text-lg text-gray-100">
                 Follow US: &nbsp;
                 <a
                   className="text-yellow-500 hover:text-white fill-current"
@@ -124,7 +136,7 @@ export default function Header(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-8 hover:text-white fill-current"
+                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="#"
                 >
                   <svg
@@ -137,7 +149,7 @@ export default function Header(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-8 hover:text-white fill-current"
+                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="#"
                 >
                   <svg
@@ -150,7 +162,7 @@ export default function Header(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-8 hover:text-white fill-current"
+                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="#"
                 >
                   <svg
@@ -163,7 +175,7 @@ export default function Header(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-8 hover:text-white fill-current"
+                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="#"
                 >
                   <svg
@@ -176,7 +188,7 @@ export default function Header(props) {
                   </svg>
                 </a>
               </p>
-              <p className="font-mono flex font-bold ml-80 mt-8 text-lg text-gray-100">
+              <p className="font-mono flex font-bold mt-4 lg:ml-80 lg:mt-8 lg:text-lg text-gray-100">
                 Reviews: &nbsp;
                 <NavLink
                   className="text-yellow-500 mt-1 flex hover:text-white fill-current"
@@ -266,22 +278,9 @@ export default function Header(props) {
             </div>
           </div>
         </div>
-        <div className="absolute top-40 right-96">
-          <div className="font-mono font-bold text-4xl text-white">
-            Podcast SaghiOMey{" "}
-          </div>
-          <br />
-          <span className="font-mono font-bold pl-28 text-xl text-white">
-            Hosted By
-          </span>
-          <br />
-          <span className="font-mono font-bold pl-32 text-xl text-white">
-            Milad
-          </span>
-        </div>
-        <div className="absolute top-3/4 w-full min-h-max bg-black">
-          <div>
-            <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+
+        <div className="absolute mt-48 md:top-2/3 lg:top-3/4 w-full min-h-max bg-black">
+            <div className="mx-auto text-center max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
                 {ep.length > episodes.length ?
                 <> 
@@ -398,25 +397,25 @@ export default function Header(props) {
                 }
               </div>
               {episodes.length > 0 ?
-              <div className="mt-16 ml-52">
-                <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
+              <div className="mt-16 md:mr-80">
+                <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black">
                   Load More
                 </button>
               </div>
               : <span className="flex text-gray-200 justify-center text-xl font-semibold">Your search returned no results, please try again</span>
                }
-              <div className="flex mt-36 justify-between">
+              <div className="md:flex mt-36 md:justify-between">
                   <span className="text-gray-300 text-lg font-medium">Recent Episodes
                   <div className="mt-4 text-base font-normal">
                   <a href="#">
-                  <ul className="list-disc">
+                  <ul className="md:list-disc">
                   {lastepisode.map((episode) => (
                     <li className="hover:text-white mt-2">{episode.name}</li>
                     ))}
                   </ul>
                   </a>
                   </div>
-                  </span>
+                  </span><br />
                   <span className="text-gray-300 text-lg font-medium">Pages
                   <div className="mt-4 text-base font-normal">
                   <a href="#">
@@ -428,9 +427,9 @@ export default function Header(props) {
                     <p className="hover:text-white mt-2">About</p>
                   </a>
                   </div>
-                  </span>
+                  </span><br />
                   <span className="text-gray-300 text-lg font-medium">Follow Our Show
-                  <div className="flex gap-3 mt-4">
+                  <div className="flex justify-center gap-3 mt-4">
                   <a href="#">
                     <img src={apple} className="h-8 w-8" />
                   </a>
@@ -441,7 +440,7 @@ export default function Header(props) {
                     <img src={spotify} className="h-8 w-8" />
                   </a>
                   </div>
-                  <div className="flex mt-4 ml-6 gap-3">
+                  <div className="flex justify-center mt-4 md:ml-6 gap-3">
                   <a href="#">
                     <img src={googlepodcast} className="h-8 w-8 rounded-full bg-white" />
                   </a>
@@ -452,9 +451,8 @@ export default function Header(props) {
                   </span>
               </div>
             </div>
-          </div>
-        </div> */}
-      </div>
+        </div>
+        </div>
     </>
   );
 }
