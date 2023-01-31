@@ -26,14 +26,14 @@ export default function Reviews(props) {
       <>
       <div className="relative">
         <img className="bg-cover" src={nightsky} alt="nightsky" />
-        <div className="absolute grid justify-items-center -mt-64 w-full text-white">
-          <span className="text-5xl font-sans font-bold">Reviews</span>
+        <div className="absolute grid justify-items-center top-8 md:top-28 w-full text-white">
+          <span className="text-lg md:text-5xl font-sans font-bold">Reviews</span>
         </div>
-        <div className="absolute top-2/4 mt-32 w-full min-h-max bg-black">
+        <div className="absolute -top-12 md:top-16 lg:top-2/4 mt-32 w-full min-h-max bg-black">
         {persian.length > 0 ?
-        <span className="ml-40 text-4xl font-sans font-bold text-gray-200">Read reviews about our podcast below!</span>
+        <span className="text-xs ml-4 md:ml-20 lg:ml-28 md:text-lg lg:text-2xl xl:ml-40 xl:text-4xl font-sans font-bold text-gray-200">Read reviews about our podcast below!</span>
         : ""}
-        <div className="mx-auto max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto text-center max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
               {ep.length > persian.length ?
                 <> 
@@ -288,25 +288,25 @@ export default function Reviews(props) {
                 }
               </div>
               {persian.length > 0 ?
-              <div className="mt-16 ml-52">
-                <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white w-1/6 h-16 ml-80 rounded-full hover:bg-white hover:text-black">
+              <div className="mt-16 md:mr-80">
+                <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black">
                   Load More
                 </button>
               </div>
               : <span className="flex text-gray-200 justify-center text-xl font-semibold">Your search returned no results, please try again</span>
               }      
-              <div className="flex mt-36 justify-between">
+              <div className="md:flex mt-36 md:justify-between">
                   <span className="text-gray-300 text-lg font-medium">Recent Episodes
                   <div className="mt-4 text-base font-normal">
                   <a href="#">
-                  <ul className="list-disc">
+                  <ul className="md:list-disc">
                   {lastepisode.map((episode) => (
                     <li className="hover:text-white mt-2">{episode.name}</li>
-                  ))}
+                    ))}
                   </ul>
                   </a>
                   </div>
-                  </span>
+                  </span><br />
                   <span className="text-gray-300 text-lg font-medium">Pages
                   <div className="mt-4 text-base font-normal">
                   <a href="#">
@@ -318,9 +318,9 @@ export default function Reviews(props) {
                     <p className="hover:text-white mt-2">About</p>
                   </a>
                   </div>
-                  </span>
+                  </span><br />
                   <span className="text-gray-300 text-lg font-medium">Follow Our Show
-                  <div className="flex gap-3 mt-4">
+                  <div className="flex justify-center gap-3 mt-4">
                   <a href="#">
                     <img src={apple} className="h-8 w-8" />
                   </a>
@@ -331,7 +331,7 @@ export default function Reviews(props) {
                     <img src={spotify} className="h-8 w-8" />
                   </a>
                   </div>
-                  <div className="flex mt-4 ml-6 gap-3">
+                  <div className="flex justify-center mt-4 md:ml-6 gap-3">
                   <a href="#">
                     <img src={googlepodcast} className="h-8 w-8 rounded-full bg-white" />
                   </a>
