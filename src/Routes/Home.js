@@ -27,7 +27,7 @@ export default function Header(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover" src={Desert} alt="Desert" />
+        {/* <img className="bg-cover" src={Desert} alt="Desert" />
         <div className="absolute flex justify-between left-32 top-80">
           <img className="h-1/4 w-1/4 rounded" src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded/22745765/22745765-1673944612760-1d57f610e6e73.jpg" alt="logo" />
           <div className="flex flex-1 items-start justify-center bg-black">
@@ -453,7 +453,7 @@ export default function Header(props) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
