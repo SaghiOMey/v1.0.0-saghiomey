@@ -23,7 +23,7 @@ export default function About(props) {
             <span className="text-2xl md:text-4xl font-sans font-bold">Host</span><br /><br /><br />
             <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">Join Host Milad as he talks to various guests each week where ”Everyone Has A Story” from the world.</span>
           </div>
-        <div className="md:flex mt-36 md:justify-between">
+          <div className="md:flex mt-36 md:justify-between mx-auto text-center max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
                   <span className="text-gray-300 text-lg font-medium">Recent Episodes
                   <div className="mt-4 text-base font-normal">
                   <a href="#">
@@ -68,7 +68,7 @@ export default function About(props) {
                   </a>
                   </div>
                   </span>
-        </div>
+          </div>
         </div>
       </div>
     </>
