@@ -20,28 +20,25 @@ export default function Persian(props) {
     const episodes = [...props.episodes].reverse()
     const lastepisode = props.episodes.slice(-5).reverse();
     const result = episodes.find(episode => episode.href === pathname.replace('/VideoInterviews/',''));
-    const mystyle = {
-        width: "62rem",
-        height: "27rem",
-    };
+    // const mystyle = {
+    //     width: "62rem",
+    //     height: "27rem",
+    // };
     console.log(result);
   return (
     <>
       <div className="relative">
 
-          <img className="bg-cover" src={sky} alt="sky" />
-          <div className="absolute grid -mt-64 w-full text-white">
+          <img className="bg-cover h-96 md:h-auto" src={sky} alt="sky" />
+          <div className="absolute grid justify-items-center md:justify-items-start w-full text-white">
           <img
             src={result.img}
             alt="logo"
-            className="w-64 -mt-48 ml-20 rounded"
+            className="-mt-96 w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
            />
-           <p className="-mt-96 ml-56 justify-self-center text-4xl font-bold">{result.name}</p>
-           <div className="flex justify-center ml-44">
-           
-           </div>
-        <div className="flex -mt-64 justify-self-center ml-56 h-0 w-5/12">
-        <span className="flex justify-center -mt-16 -ml-36"><iframe style={mystyle} width="560" height="315" src={result.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
+           <p className="-mt-56 xl:-mt-96 lg:-mt-96 md:-mt-72 xl:ml-56 lg:ml-56 md:ml-56 justify-self-center xl:text-4xl lg:text-2xl md:text-xl font-bold">{result.name}</p>
+        <div className="justify-self-center -mt-48 w-72 md:-mt-64 md:ml-56 md:h-60 md:w-1/2 lg:-mt-80 lg:ml-80 lg:w-3/5 lg:h-72 xl:ml-96 aspect-video">
+        <iframe className="w-full h-36 md:h-60 lg:h-72" src={result.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
           </div>
           <div className="absolute mt-auto xl:mt-32 lg:mt-24 md:mt-24 md:top-2/3 lg:top-3/4 w-full min-h-max bg-black">
