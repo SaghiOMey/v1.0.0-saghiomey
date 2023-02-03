@@ -98,7 +98,7 @@ console.log(current());
                   />
                 </div>
                 <div className="hidden pt-4 sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div>
                     {navigation.map((item) => (
                       <NavLink
                         to={item.href}
@@ -189,6 +189,13 @@ console.log(current());
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pt-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <button
+                  // onClick={() => setSearch(!Search)}
+                  type="button"
+                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
                 {Search ? 
               <input type="search" onChange={handleChange} value={Name} class="form-control relative flex-auto min-w-0 block w-32 px-3 py-1.5 text-base font-normal bg-inherit text-gray-200 bg-clip-padding border-b border-solid border-b-yellow-500 transition ease-in-out m-0 focus:text-gray-200 focus:border-b-yellow-600	 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
                 : null }
@@ -206,7 +213,7 @@ console.log(current());
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-16 w-16 rounded-full"
@@ -232,7 +239,7 @@ console.log(current());
                             to="Profile"
                             className={classNames(
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-4 py-2 text-sm text-gray-700 hover:text-yellow-500"
                             )}
                           >
                             Profile
@@ -246,7 +253,7 @@ console.log(current());
                             to="Reviews"
                             className={classNames(
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-4 py-2 text-sm text-gray-700 hover:text-yellow-500"
                             )}
                           >
                             Reviews
@@ -279,6 +286,7 @@ console.log(current());
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <button onClick={() => setOpen(true)} className="text-gray-300 hover:bg-gray-700 pointer hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium">Subscribe</button>
             </div>
           </Disclosure.Panel>
         </>
