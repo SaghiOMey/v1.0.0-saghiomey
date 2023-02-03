@@ -236,8 +236,6 @@ export default function Persian(props) {
                 <span className="font-normal font-sans text-white lg:text-2xl">{result.describtion}.</span><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">Listen on</span><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">Anchor-</span><a href={result.anchor} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.anchor}</a><br /><br />
-                {/* <span className="font-normal font-sans text-white lg:text-2xl">Spotify-</span><a href={result.spotify} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.spotify}</a><br /><br /> */}
-                <span className="font-normal font-sans text-white lg:text-2xl">ApplePodcast-</span><a href={result.apple} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.apple}</a><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">CastBox-</span><a href={result.castbox} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.castbox}</a><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">You can watch this interview on YouTube</span><a href={result.youtube} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.youtube}</a><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">Follow us on Social Media for the latest show updates</span><br /><br />
