@@ -11,7 +11,7 @@ import Card from "../Components/Card";
 
 export default function AudioPersianInterviews(props) {
   const episodes = [...props.episodes].reverse().filter(p => p.ln === "pa");
-  const lastepisode = props.episodes.slice(-5).reverse();
+  const lastepisode = props.episode.slice(-5).reverse();
     return (
       <>
       <div className="relative">

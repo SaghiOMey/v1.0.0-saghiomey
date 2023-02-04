@@ -132,9 +132,9 @@ export default function Card(episodes) {
             </div>
             :
             <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
-                {ep.length > episodes.length ?
+                {ep.length > episodes.episodes.length ?
                 <> 
-                {episodes.slice(0,9).map((episode) => ( 
+                {episodes.episodes.slice(0,9).map((episode) => ( 
                   <NavLink to={`${episode.href}`}>
                   <div key={episode.id} className="group relative rounded-md bg-zinc-900 border-8 border-zinc-900">
                     <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">

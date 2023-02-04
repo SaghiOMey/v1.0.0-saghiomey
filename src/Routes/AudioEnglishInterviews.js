@@ -11,7 +11,7 @@ import Footer from "../Components/Footer";
 
 export default function AudioEnglishInterviews(props) {
   const episodes = [...props.episodes].reverse().filter(p => p.ln === "en");
-  const lastepisode = props.episodes.slice(-5).reverse();
+  const lastepisode = props.episode.slice(-5).reverse();
   return (
     <>
     <div className="relative">

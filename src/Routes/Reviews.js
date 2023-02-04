@@ -13,9 +13,9 @@ import { useState } from 'react'
 import Footer from "../Components/Footer";
 
 export default function Reviews(props) {
-  const persian = [...props.episodes].reverse().filter(p => p.ln === "pa");
-  const [ep, setEp] = useState(persian.slice(0,9));
-  const lastepisode = props.episodes.slice(-5).reverse();
+  const reviews = [...props.reviews].reverse();
+  const [ep, setEp] = useState(reviews.slice(0,9));
+  const lastepisode = props.episode.slice(-5).reverse();
     return (
       <>
       <div className="relative">
@@ -24,17 +24,17 @@ export default function Reviews(props) {
           <span className="text-lg md:text-5xl font-sans font-bold">Reviews</span>
         </div>
         <div className="absolute -top-12 md:top-16 lg:top-2/4 mt-32 w-full min-h-max bg-black">
-        {persian.length > 0 ?
+        {reviews.length > 0 ?
         <span className="text-xs ml-4 md:ml-20 lg:ml-28 md:text-lg lg:text-2xl xl:ml-40 xl:text-4xl font-sans font-bold text-gray-200">Read reviews about our podcast below!</span>
         : ""}
         <div className="mx-auto text-center max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
               <div className="mt-6 grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">
-              {ep.length > persian.length ?
+              {ep.length > reviews.length ?
                 <> 
-                {persian.slice(0,9).map((episode) => ( 
-                  <div key={episode.id} className="group relative rounded-md bg-zinc-900 border-8 border-zinc-900">
+                {reviews.slice(0,9).map((review) => ( 
+                  <div key={review.id} className="group relative rounded-md bg-zinc-900 border-8 border-zinc-900">
                   <div className="h-20 aspect-w-1 w-full overflow-hidden rounded-md bg-zinc-900 lg:aspect-none lg:h-90">
-                  <span className="absolute flex w-full justify-center font-medium text-sm text-gray-400">Apple Podcasts</span>
+                  <span className="absolute flex w-full justify-center font-medium text-sm text-gray-400">{review.platform}</span>
                   <span
                    className="ml-4 text-yellow-500 mt-8 lg:mt-4 flex fill-current"
                   >
@@ -122,21 +122,21 @@ export default function Reviews(props) {
                     <div className="mt-4">
                       <div>
                         <p className=" lg:mt-6 ml-4 mr-1 font-bold text-base text-white">
-                          {episode.name}
+                          {review.epname}
                         </p>
                       </div>
                       <p className="text-lg lg:text-2xl mt-4 ml-4 mr-1 font-medium text-gray-200">
-                        {episode.describtion}
+                        {review.describtion}
                       </p>
                     </div>
                     <div className="flex place-content-between items-end">
                     <span className="flex ml-4 font-semibold text-xs lg:text-base">
                       <img className="text-white" src={person} />
-                      <span style={{color: "#5b5454"}}>name</span>
+                      <span style={{color: "#5b5454"}}>{review.username}</span>
                     </span>
                     <span className="flex mr-4 font-semibold text-xs lg:text-base">
                       <img className="text-white mr-1" src={calendar} />
-                      <span style={{color: "#5b5454"}}>{episode.date}</span>
+                      <span style={{color: "#5b5454"}}>{review.date}</span>
                     </span>
                     </div>
                     <div className="flex place-content-between items-end">
@@ -156,10 +156,10 @@ export default function Reviews(props) {
                 </>
                 : 
                 <>
-                {ep.map((episode) => ( 
-                  <div key={episode.id} className="group relative rounded-md bg-zinc-900 border-8 border-zinc-900">
+                {ep.map((review) => ( 
+                  <div key={review.id} className="group relative rounded-md bg-zinc-900 border-8 border-zinc-900">
                     <div className="h-20 aspect-w-1 w-full overflow-hidden rounded-md bg-zinc-900 lg:aspect-none lg:h-90">
-                    <span className="absolute flex w-full justify-center font-medium text-sm text-gray-400">Apple Podcasts</span>
+                    <span className="absolute flex w-full justify-center font-medium text-sm text-gray-400">{review.platform}</span>
                     <span
                      className="ml-4 text-yellow-500 mt-8 lg:mt-4 flex fill-current"
                     >
@@ -247,21 +247,21 @@ export default function Reviews(props) {
                       <div className="mt-4">
                         <div>
                           <p className=" lg:mt-6 ml-4 mr-1 font-bold text-base text-white">
-                            {episode.name}
+                            {review.epname}
                           </p>
                         </div>
                         <p className="text-lg lg:text-2xl mt-4 ml-4 mr-1 font-medium text-gray-200">
-                          {episode.describtion}
+                          {review.describtion}
                         </p>
                       </div>
                       <div className="flex place-content-between items-end">
                       <span className="flex ml-4 font-semibold text-xs lg:text-base">
                         <img className="text-white" src={person} />
-                        <span style={{color: "#5b5454"}}>name</span>
+                        <span style={{color: "#5b5454"}}>{review.username}</span>
                       </span>
                       <span className="flex mr-4 font-semibold text-xs lg:text-base">
                         <img className="text-white mr-1" src={calendar} />
-                        <span style={{color: "#5b5454"}}>{episode.date}</span>
+                        <span style={{color: "#5b5454"}}>{review.date}</span>
                       </span>
                       </div>
                       <div className="flex place-content-between items-end">
@@ -281,9 +281,9 @@ export default function Reviews(props) {
                 </>
                 }
               </div>
-              {persian.length > 0 ?
+              {reviews.length > 0 ?
               <div className="mt-16 md:mr-80">
-                <button onClick={() => setEp([...props.episodes].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black">
+                <button onClick={() => setEp([...props.reviews].reverse().slice(0,ep.length + 9))} class="bg-yellow-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black">
                   Load More
                 </button>
               </div>

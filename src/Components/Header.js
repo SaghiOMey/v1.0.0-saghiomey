@@ -45,6 +45,7 @@ export default function Header(props) {
     setName (e.target.value);
   }
   const filterNames = props.episodes.filter((episodes) => episodes.name.toLowerCase().includes(Name.toLowerCase()))
+  const filterReviews = props.reviews.filter((reviews) => reviews.epname.toLowerCase().includes(Name.toLowerCase()))
   const cancelButtonRef = useRef(null)
 
   let navigation = [
@@ -294,7 +295,7 @@ console.log(current());
     </Disclosure>
   <Routes>
   <Route path="Profile" element={<Profile episode = {props.episodes} />} />
-  <Route path="Reviews" element={<Reviews episodes = {filterNames} episode = {props.episodes}  />} />
+  <Route path="Reviews" element={<Reviews reviews = {filterReviews} episode = {props.episodes}  />} />
   <Route path="About" element={<About episodes = {props.episodes} />} />
   <Route path="/*" element={<Home episodes = {filterNames} episode = {props.episodes} />} />
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />
@@ -302,7 +303,7 @@ console.log(current());
   <Route path="EnglishEpisodes/:href" element={<English episodes = {props.episodes}  />} />
   <Route path="VideoInterviews/:href" element={<Video episodes = {props.episodes}  />} />
   <Route path="VideoInterviews/*" element={<VideoInterviews episodes = {filterNames} episode = {props.episodes} />} />
-  <Route path="EnglishEpisodes/*" element={<AudioEnglishInterviews episodes = {props.episodes} />} />
+  <Route path="EnglishEpisodes/*" element={<AudioEnglishInterviews episodes = {props.episodes} episode = {props.episodes} />} />
   <Route path="PersianEpisodes/*" element={<AudioPersianInterviews episodes = {filterNames} episode = {props.episodes} />} />
   </Routes>
     </div>
