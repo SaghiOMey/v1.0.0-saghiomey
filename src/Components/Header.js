@@ -67,14 +67,13 @@ export default function Header(props) {
     return navigation = navigation.map(nav => nav.href === result.href ? result : nav)
   }
 
-  function Sub() {
     useEffect(() => {
       OneSignal.init({
         appId: "62e0bd67-f20e-4491-b24f-a27b58d7cdfc"
       });
     }, [])
-  }
-console.log(current());
+
+// console.log(Sub());
 
   return (
     <div>
@@ -200,7 +199,7 @@ console.log(current());
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pt-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
-                  onClick={() => Sub()}
+                  // onClick={() => Sub()}
                   type="button"
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
