@@ -73,6 +73,7 @@ export default function Header(props) {
         appId: "62e0bd67-f20e-4491-b24f-a27b58d7cdfc"
       });
     }, [])
+    console.log("click")
   }
 console.log(current());
 
