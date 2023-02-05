@@ -15,7 +15,7 @@ import Persian from "../Routes/Persian";
 import Video from "../Routes/Video";
 import English from "../Routes/English";
 import VideoInterviews from "../Routes/VideoInterviews";
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react'
 import apple from "../apple.svg";
 import youtube from "../youtube.svg";
@@ -28,6 +28,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Profile from "../Routes/Profile";
 import Reviews from "../Routes/Reviews";
+import OneSignal from 'react-onesignal';
 
 
 
@@ -64,6 +65,14 @@ export default function Header(props) {
       result = pathname
     }
     return navigation = navigation.map(nav => nav.href === result.href ? result : nav)
+  }
+
+  function Sub() {
+    useEffect(() => {
+      OneSignal.init({
+        appId: "62e0bd67-f20e-4491-b24f-a27b58d7cdfc"
+      });
+    }, [])
   }
 console.log(current());
 
@@ -191,7 +200,7 @@ console.log(current());
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pt-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
-                  // onClick={() => setSearch(!Search)}
+                  onClick={() => Sub()}
                   type="button"
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
