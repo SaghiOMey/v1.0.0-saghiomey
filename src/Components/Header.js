@@ -68,7 +68,7 @@ export default function Header(props) {
   }
 
   function Sub() {
-   return useEffect(() => {
+    useEffect(() => {
       OneSignal.init({
         appId: "62e0bd67-f20e-4491-b24f-a27b58d7cdfc"
       });
