@@ -1,4 +1,0 @@
-[build]
-  base = "saghiomey "
-	command = "CI= npm run build"
-	publish = "build"

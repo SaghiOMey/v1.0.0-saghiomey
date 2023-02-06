@@ -4,7 +4,7 @@ import Episodes from "../api/episodes.json";
 import Reviews from "../api/reviews.json";
 import Header from "./Header";
 // eslint-disable-next-line no-unused-vars
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 
 function App() {
