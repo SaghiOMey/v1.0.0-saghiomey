@@ -37,7 +37,6 @@ import browse from "../browsePodcast.svg";
 import AudioPlayer from 'react-modern-audio-player';
 import Footer from "../Components/Footer";
 
-
   
 
 export default function Episode(props) {
@@ -158,27 +157,27 @@ export default function Episode(props) {
                       <TwitterShareButton url={result.eplink}>
                       <TwitterIcon size={40} round={true} />
                       </TwitterShareButton>
-                      <FacebookShareButton url={result.eplink}n>
+                      <FacebookShareButton url={result.eplink}>
                         <FacebookIcon size={40} round={true} />
                       </FacebookShareButton>
-                      <LinkedinShareButton url={result.eplink}n>
+                      <LinkedinShareButton url={result.eplink}>
                         <LinkedinIcon size={40} round={true} />
                       </LinkedinShareButton>
-                      <PinterestShareButton url={result.eplink}n>
+                      <PinterestShareButton url={result.eplink}>
                         <PinterestIcon size={40} round={true} />
                       </PinterestShareButton>
                       </div>
                       <div className="flex justify-between mt-8">
-                      <WhatsappShareButton url={result.eplink}n>
+                      <WhatsappShareButton url={result.eplink}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <TelegramShareButton url={result.eplink}n>
+                      <TelegramShareButton url={result.eplink}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
-                      <RedditShareButton url={result.eplink}n>
+                      <RedditShareButton url={result.eplink}>
                         <RedditIcon size={40} round={true} />
                       </RedditShareButton>
-                      <EmailShareButton url={result.eplink}n>
+                      <EmailShareButton url={result.eplink}>
                         <EmailIcon size={40} round={true} />
                       </EmailShareButton>
                       </div>
