@@ -1,4 +1,4 @@
 [build]
-  base = "saghiomey.netlify.app"
+  base = "saghiomey "
 	command = "CI= npm run build"
 	publish = "build"
