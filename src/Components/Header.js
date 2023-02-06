@@ -17,7 +17,7 @@ import English from "../Routes/English";
 import VideoInterviews from "../Routes/VideoInterviews";
 import { useRef, useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react'
-import apple from "../apple.svg";
+// import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
@@ -160,9 +160,9 @@ console.log(current());
                   <a href="https://www.youtube.com/@Saghiomey?sub_confirmation=1">
                     <img src={youtube} className="h-12 w-12 rounded-full" />
                   </a>
-                  <a href="#">
+                  {/* <a href="#">
                     <img src={apple} className="h-12 w-12" />
-                  </a>
+                  </a> */}
                   <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
                     <img src={spotify} className="h-12 w-12" />
                   </a>

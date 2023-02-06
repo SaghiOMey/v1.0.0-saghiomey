@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom"
 import { Dialog } from '@headlessui/react'
 import { Transition } from "@headlessui/react";
 import sky from "../sky.jpg";
-import apple from "../apple.svg";
+// import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import share from "../share.svg";
@@ -219,10 +219,10 @@ export default function Persian(props) {
            <img src={youtube} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">YouTube</span>
           </a>
-          <a href="#" className="flex bg-white h-12 w-44 rounded hover:bg-opacity-0">
+          {/* <a href="#" className="flex bg-white h-12 w-44 rounded hover:bg-opacity-0">
            <img src={apple} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Apple Podcasts</span>
-          </a>
+          </a> */}
           <a href="#" className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
            <img src={spotify} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Spotify</span>
