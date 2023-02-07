@@ -56,6 +56,7 @@ export default function Header(props) {
     { name: "Audio English Interviews", href: "EnglishEpisodes", current: false },
     { name: "Audio Persian Interviews", href: "PersianEpisodes", current: false },
     { name: "About", href: "About", current: false },
+    { name: "Contact", href: "Contact", current: false },
   ];
 
   function current() {

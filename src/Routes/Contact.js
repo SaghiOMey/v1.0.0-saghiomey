@@ -10,6 +10,7 @@ import emailjs from '@emailjs/browser';
 export default function Contact(props) {
   const form1 = useRef();
   const lastepisode = props.episodes.slice(-5).reverse();
+  const [open, setOpen] = useState(false)
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -39,6 +40,7 @@ export default function Contact(props) {
     // alert(JSON.stringify(form, null, 2));
     emailjs.sendForm('service_042vorh', 'template_w340yso', form1.current, 'ZmTSurbMfBR4GpUVC')
     .then((result) => {
+      setOpen(true)
       console.log(result.text);
   }, (error) => {
       console.log(error.text);
@@ -56,6 +58,19 @@ export default function Contact(props) {
           <div className="grid justify-items-center lg:mb-56 mt-12 lg:ml-20 lg:mr-20 leading-8 text-gray-200">
             <span className="text-2xl md:text-4xl font-sans font-bold">Drop us a line!</span><br /><br />
             <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">If you want to get in touch or leave us a message with questions, feedback, suggestions or anything else, please don't hesitate to fill in the form below and we'll get back to you as soon as we can!</span>
+            {open ? 
+            <div show={open} class="flex w-96 shadow-lg rounded-lg">
+            <div class="bg-green-600 py-4 px-6 rounded-l-lg flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 16 16" width="20" height="20"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
+            </div>
+            <div class="px-4 py-6 bg-white rounded-r-lg flex justify-between items-center w-full border border-l-transparent border-gray-200">
+              <div className="text-xl font-bold text-black">Submitted successfully</div>
+            <button onClick={() => setOpen(false)}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-700" viewBox="0 0 16 16" width="20" height="20"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg>
+            </button>
+            </div>
+            </div>
+            : "" }
             <form ref={form1} onSubmit={onSubmitForm}>
           <div className="mt-8">
             <input
@@ -105,8 +120,8 @@ export default function Contact(props) {
           <p className={styles.formFieldErrorMessage}>{errors.message.message}</p>
         ) : null}
            </div>
-           <div className="mt-5">
-                <button type="submit" className="bg-yellow-500 text-white lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black">
+           <div className="flex justify-center mt-5">
+                <button type="submit" className="bg-yellow-500 text-white w-32 h-16 rounded-full hover:bg-white hover:text-black">
                   Submit
                 </button>
               </div>
