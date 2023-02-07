@@ -29,6 +29,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Profile from "../Routes/Profile";
 import Reviews from "../Routes/Reviews";
 import OneSignal from 'react-onesignal';
+import Contact from "../Routes/Contact";
 
 
 
@@ -305,6 +306,7 @@ console.log(current());
   <Route path="Profile" element={<Profile episode = {props.episodes} />} />
   <Route path="Reviews" element={<Reviews reviews = {filterReviews} episode = {props.episodes}  />} />
   <Route path="About" element={<About episodes = {props.episodes} />} />
+  <Route path="Contact" element={<Contact episodes = {props.episodes} />} />
   <Route path="/*" element={<Home episodes = {filterNames} episode = {props.episodes} />} />
   <Route path=":href" element={<Episode episodes = {props.episodes}  />} />
   <Route path="PersianEpisodes/:href" element={<Persian episodes = {props.episodes}  />} />
