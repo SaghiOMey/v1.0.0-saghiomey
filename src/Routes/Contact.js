@@ -3,10 +3,12 @@
 import nightsky from "../nightsky.jpg";
 import Footer from "../Components/Footer";
 import styles from "../Components/Contact.module.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {useFormContact} from "../Components/useFromContact";
+import emailjs from '@emailjs/browser';
 
 export default function Contact(props) {
+  const form1 = useRef();
   const lastepisode = props.episodes.slice(-5).reverse();
   const [form, setForm] = useState({
     name: "",
@@ -34,7 +36,13 @@ export default function Contact(props) {
     e.preventDefault();
     const { isValid } = validateForm({ form, errors, forceTouchErrors: true });
     if (!isValid) return;
-    alert(JSON.stringify(form, null, 2));
+    // alert(JSON.stringify(form, null, 2));
+    emailjs.sendForm('service_042vorh', 'template_w340yso', form1.current, 'ZmTSurbMfBR4GpUVC')
+    .then((result) => {
+      console.log(result.text);
+  }, (error) => {
+      console.log(error.text);
+  });
   };
   
   return (
@@ -48,7 +56,7 @@ export default function Contact(props) {
           <div className="grid justify-items-center lg:mb-56 mt-12 lg:ml-20 lg:mr-20 leading-8 text-gray-200">
             <span className="text-2xl md:text-4xl font-sans font-bold">Drop us a line!</span><br /><br />
             <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">If you want to get in touch or leave us a message with questions, feedback, suggestions or anything else, please don't hesitate to fill in the form below and we'll get back to you as soon as we can!</span>
-            <form onSubmit={onSubmitForm}>
+            <form ref={form1} onSubmit={onSubmitForm}>
           <div className="mt-8">
             <input
                type="text"
