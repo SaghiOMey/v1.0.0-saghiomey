@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser';
 export default function Contact(props) {
   const form1 = useRef();
   const lastepisode = props.episodes.slice(-5).reverse();
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -59,12 +59,12 @@ export default function Contact(props) {
             <span className="text-2xl md:text-4xl font-sans font-bold">Drop us a line!</span><br /><br />
             <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">If you want to get in touch or leave us a message with questions, feedback, suggestions or anything else, please don't hesitate to fill in the form below and we'll get back to you as soon as we can!</span>
             {open ? 
-            <div show={open} class="flex w-96 shadow-lg rounded-lg">
+            <div show={open} class="flex w-72 mt-5 md:w-96 shadow-lg rounded-lg">
             <div class="bg-green-600 py-4 px-6 rounded-l-lg flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="text-white fill-current" viewBox="0 0 16 16" width="20" height="20"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>
             </div>
             <div class="px-4 py-6 bg-white rounded-r-lg flex justify-between items-center w-full border border-l-transparent border-gray-200">
-              <div className="text-xl font-bold text-black">Submitted successfully</div>
+              <div className="text-lg md:text-xl font-bold text-black">Submitted successfully</div>
             <button onClick={() => setOpen(false)}>
               <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-700" viewBox="0 0 16 16" width="20" height="20"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg>
             </button>
@@ -82,7 +82,7 @@ export default function Contact(props) {
                autoComplete="family-name"
                placeholder=" Your Name"
                onBlur={onBlurField}
-              className="mt-1 h-12 w-96 bg-black block rounded-md border border-white shadow-sm focus:outline-none focus:border-yellow-500 sm:text-medium"
+              className="mt-1 h-12 w-72 md:w-96 bg-black block rounded-md border border-white shadow-sm focus:outline-none focus:border-yellow-500 sm:text-medium"
              />
              {errors.name.dirty && errors.name.error ? (
           <p className={styles.formFieldErrorMessage}>{errors.name.message}</p>
@@ -98,7 +98,7 @@ export default function Contact(props) {
                autoComplete="email"
                placeholder=" Your Email"
                onBlur={onBlurField}
-              className="mt-1 h-12 w-96 bg-black block rounded-md border border-white shadow-sm focus:outline-none focus:border-yellow-500 sm:text-medium"
+              className="mt-1 h-12 w-72 md:w-96 bg-black block rounded-md border border-white shadow-sm focus:outline-none focus:border-yellow-500 sm:text-medium"
              />
              {errors.email.dirty && errors.email.error ? (
           <p className={styles.formFieldErrorMessage}>{errors.email.message}</p>
@@ -114,7 +114,7 @@ export default function Contact(props) {
                autoComplete="message"
                placeholder=" Your Message"
                onBlur={onBlurField}
-              className="mt-1 h-32 w-96 bg-black block rounded-md border border-white shadow-sm focus:outline-none focus:border-yellow-500 sm:text-medium"
+              className="mt-1 h-32 w-72 md:w-96 bg-black block rounded-md border border-white shadow-sm focus:outline-none focus:border-yellow-500 sm:text-medium"
              />
              {errors.message.dirty && errors.message.error ? (
           <p className={styles.formFieldErrorMessage}>{errors.message.message}</p>
