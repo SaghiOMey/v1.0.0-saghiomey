@@ -54,7 +54,7 @@ export default function Contact(props) {
         <div className="absolute grid justify-items-center top-8 md:top-28 w-full text-white">
           <span className="text-lg md:text-5xl font-sans font-bold">Contact Us</span>
         </div>
-        <div className="absolute text-center lg:text-justify -top-12 md:top-16 lg:top-2/4 mt-32 w-full min-h-max bg-black">
+        <div className="absolute text-center -top-12 md:top-16 lg:top-2/4 mt-32 w-full min-h-max bg-black">
           <div className="grid justify-items-center lg:mb-56 mt-12 lg:ml-20 lg:mr-20 leading-8 text-gray-200">
             <span className="text-2xl md:text-4xl font-sans font-bold">Drop us a line!</span><br /><br />
             <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">If you want to get in touch or leave us a message with questions, feedback, suggestions or anything else, please don't hesitate to fill in the form below and we'll get back to you as soon as we can!</span>
