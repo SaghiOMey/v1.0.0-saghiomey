@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom"
 import { Dialog } from '@headlessui/react'
 import { Transition } from "@headlessui/react";
 import sky from "../sky.jpg";
+import { Helmet } from "react-helmet";
 // import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
@@ -171,9 +172,12 @@ export default function Episode(props) {
                       <WhatsappShareButton url={result.eplink}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
+                      <Helmet>
                       <TelegramShareButton url={result.eplink} title={result.name}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
+                      <meta name="description" content={result.describtion} />
+                      </Helmet>
                       <RedditShareButton url={result.eplink} title={result.name}>
                         <RedditIcon size={40} round={true} />
                       </RedditShareButton>
