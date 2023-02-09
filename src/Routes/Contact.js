@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser';
 export default function Contact(props) {
   const form1 = useRef();
   const lastepisode = props.episodes.slice(-5).reverse();
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const [form, setForm] = useState({
     name: "",
     email: "",
