@@ -59,6 +59,7 @@ export default function Episode(props) {
     return (
         <>
         <div className="relative">
+          <Helmet>
           <img className="bg-cover h-96 md:h-auto" src={sky} alt="sky" />
           <div className="absolute grid justify-items-center md:justify-items-start w-full text-white">
           <img
@@ -172,12 +173,10 @@ export default function Episode(props) {
                       <WhatsappShareButton url={result.eplink}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <Helmet>
                       <TelegramShareButton url={result.eplink} title={result.name}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
                       <meta name="description" content={result.describtion} />
-                      </Helmet>
                       <RedditShareButton url={result.eplink} title={result.name}>
                         <RedditIcon size={40} round={true} />
                       </RedditShareButton>
@@ -248,6 +247,7 @@ export default function Episode(props) {
                 <Footer lastepisode = {lastepisode} />
           </div>
           </div>
+          </Helmet>
         </div>
         </>
     );
