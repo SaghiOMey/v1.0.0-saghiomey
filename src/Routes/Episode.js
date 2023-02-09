@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom"
 import { Dialog } from '@headlessui/react'
 import { Transition } from "@headlessui/react";
 import sky from "../sky.jpg";
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 // import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
@@ -58,6 +58,11 @@ export default function Episode(props) {
     
     return (
         <>
+        <Helmet>
+          <title>{result.describtion}</title>
+          <meta name="description" content={result.describtion} />
+          <link href={result.img} />
+        </Helmet>
         <div className="relative">
           <img className="bg-cover h-96 md:h-auto" src={sky} alt="sky" />
           <div className="absolute grid justify-items-center md:justify-items-start w-full text-white">

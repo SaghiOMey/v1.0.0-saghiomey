@@ -3,6 +3,8 @@ import React,{useState} from 'react';
 import Episodes from "../api/episodes.json";
 import Reviews from "../api/reviews.json";
 import Header from "./Header";
+import { Helmet } from 'react-helmet';
+import ico from '../saghiomey.ico'
 // eslint-disable-next-line no-unused-vars
 import { HashRouter as Router } from "react-router-dom";
 
@@ -13,6 +15,11 @@ function App() {
 
   return (
     <>
+    <Helmet>
+    <title>SaghiOMey</title>
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="icon" href={ico} />
+    </Helmet>
     <Router>
     <Header episodes={episodes} reviews = {Reviews} />
     </Router>
