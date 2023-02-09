@@ -47,6 +47,14 @@ export default function Episode(props) {
     const episodes = [...props.episodes].reverse()
     const lastepisode = props.episodes.slice(-5).reverse();
     const result = episodes.find(episode => episode.href === pathname.replace('/',''));
+    const r = result => {
+      return (
+        <div>
+          <span>{result.name}</span><br />
+          <span>{result.describtion}</span>
+        </div>
+      )
+    } 
     console.log(result);
     const playList = [
       {
@@ -154,16 +162,16 @@ export default function Episode(props) {
                       <span className="ml-4">{result.name}</span>
                       </Dialog.Title>
                       <div className="flex justify-between mt-8">
-                      <TwitterShareButton url={result.eplink}>
+                      <TwitterShareButton url={result.eplink} title={result.name}>
                       <TwitterIcon size={40} round={true} />
                       </TwitterShareButton>
-                      <FacebookShareButton url={result.eplink}>
+                      <FacebookShareButton url={result.eplink} quote={result.name}>
                         <FacebookIcon size={40} round={true} />
                       </FacebookShareButton>
-                      <LinkedinShareButton url={result.eplink}>
+                      <LinkedinShareButton url={result.eplink} title={result.name} summary={result.describtion}>
                         <LinkedinIcon size={40} round={true} />
                       </LinkedinShareButton>
-                      <PinterestShareButton url={result.eplink}>
+                      <PinterestShareButton url={result.eplink} description={result.describtion}>
                         <PinterestIcon size={40} round={true} />
                       </PinterestShareButton>
                       </div>
@@ -171,13 +179,13 @@ export default function Episode(props) {
                       <WhatsappShareButton url={result.eplink}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <TelegramShareButton url={result.eplink} title={result.name && result.describtion && result.img}>
+                      <TelegramShareButton url={result.eplink} title={r()}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
-                      <RedditShareButton url={result.eplink}>
+                      <RedditShareButton url={result.eplink} title={result.name}>
                         <RedditIcon size={40} round={true} />
                       </RedditShareButton>
-                      <EmailShareButton url={result.eplink}>
+                      <EmailShareButton url={result.eplink} subject={result.name}>
                         <EmailIcon size={40} round={true} />
                       </EmailShareButton>
                       </div>
