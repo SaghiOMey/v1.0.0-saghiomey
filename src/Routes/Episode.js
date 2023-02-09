@@ -47,14 +47,6 @@ export default function Episode(props) {
     const episodes = [...props.episodes].reverse()
     const lastepisode = props.episodes.slice(-5).reverse();
     const result = episodes.find(episode => episode.href === pathname.replace('/',''));
-    const r = result => {
-      return (
-        <div>
-          <span>{result.name}</span><br />
-          <span>{result.describtion}</span>
-        </div>
-      )
-    } 
     console.log(result);
     const playList = [
       {
@@ -179,7 +171,7 @@ export default function Episode(props) {
                       <WhatsappShareButton url={result.eplink}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <TelegramShareButton url={result.eplink} title={r(result)}>
+                      <TelegramShareButton url={result.eplink} title={result.name}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
                       <RedditShareButton url={result.eplink} title={result.name}>
