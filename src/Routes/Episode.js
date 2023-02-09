@@ -171,7 +171,7 @@ export default function Episode(props) {
                       <WhatsappShareButton url={result.eplink}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <TelegramShareButton url={result.eplink} title={result.name}>
+                      <TelegramShareButton url={result.eplink} title={result.name && result.img}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
                       <RedditShareButton url={result.eplink}>
