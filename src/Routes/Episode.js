@@ -170,7 +170,7 @@ export default function Episode(props) {
                       <LinkedinShareButton url={result.eplink} title={result.name} summary={result.describtion}>
                         <LinkedinIcon size={40} round={true} />
                       </LinkedinShareButton>
-                      <PinterestShareButton url={result.eplink}>
+                      <PinterestShareButton url={result.eplink} media={result.img} description={result.describtion}>
                         <PinterestIcon size={40} round={true} />
                       </PinterestShareButton>
                       </div>

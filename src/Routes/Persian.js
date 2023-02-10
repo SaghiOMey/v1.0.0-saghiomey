@@ -160,30 +160,30 @@ export default function Persian(props) {
                       <span className="ml-4">{result.name}</span>
                       </Dialog.Title>
                       <div className="flex justify-between mt-8">
-                      <TwitterShareButton url={result.eplink}>
+                      <TwitterShareButton url={result.eplink} title={result.name}>
                       <TwitterIcon size={40} round={true} />
                       </TwitterShareButton>
-                      <FacebookShareButton url={result.eplink}n>
+                      <FacebookShareButton url={result.eplink} quote={result.name}>
                         <FacebookIcon size={40} round={true} />
                       </FacebookShareButton>
-                      <LinkedinShareButton url={result.eplink}n>
+                      <LinkedinShareButton url={result.eplink} title={result.name} summary={result.describtion}> 
                         <LinkedinIcon size={40} round={true} />
                       </LinkedinShareButton>
-                      <PinterestShareButton url={result.eplink}n>
+                      <PinterestShareButton url={result.eplink} media={result.img} description={result.describtion}>
                         <PinterestIcon size={40} round={true} />
                       </PinterestShareButton>
                       </div>
                       <div className="flex justify-between mt-8">
-                      <WhatsappShareButton url={result.eplink}n>
+                      <WhatsappShareButton url={result.eplink} title={result.name}>
                         <WhatsappIcon size={40} round={true} />
                       </WhatsappShareButton>
-                      <TelegramShareButton url={result.eplink}n>
+                      <TelegramShareButton url={result.eplink} title={result.name}>
                         <TelegramIcon size={40} round={true} />
                       </TelegramShareButton>
-                      <RedditShareButton url={result.eplink}n>
+                      <RedditShareButton url={result.eplink} title={result.name}>
                         <RedditIcon size={40} round={true} />
                       </RedditShareButton>
-                      <EmailShareButton url={result.eplink}n>
+                      <EmailShareButton url={result.eplink} subject={result.name}>
                         <EmailIcon size={40} round={true} />
                       </EmailShareButton>
                       </div>
