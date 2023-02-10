@@ -17,7 +17,6 @@ function App() {
     <>
     <Helmet>
     <title>SaghiOMey</title>
-    <meta name="description" content="Podcast SaghiOMey" />
     <meta property="og:title" key="og:title" content="SaghiOMey" />
     <meta property="og:description" key="og:description" content="Podcast SaghiOMey" />
     </Helmet>

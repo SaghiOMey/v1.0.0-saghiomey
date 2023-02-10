@@ -60,7 +60,6 @@ export default function Episode(props) {
         <>
         <Helmet>
           <title>{result.describtion}</title>
-          <meta name="description" content={result.describtion} />
           <meta property="og:title" key="og:title" content={result.name}/>
           <meta property="og:description" key="og:description" content={result.describtion} />
         </Helmet>
