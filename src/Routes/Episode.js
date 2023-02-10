@@ -61,7 +61,7 @@ export default function Episode(props) {
         <Helmet>
           <title>{result.describtion}</title>
           <meta name="description" content={result.describtion} />
-          <link href={result.img} />
+          <meta property="og:title" key="og:title" content={result.name}/>
         </Helmet>
         <div className="relative">
           <img className="bg-cover h-96 md:h-auto" src={sky} alt="sky" />

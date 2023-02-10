@@ -4,7 +4,7 @@ import Episodes from "../api/episodes.json";
 import Reviews from "../api/reviews.json";
 import Header from "./Header";
 import { Helmet } from 'react-helmet';
-import ico from '../saghiomey.ico'
+// import ico from '../saghiomey.ico'
 // eslint-disable-next-line no-unused-vars
 import { HashRouter as Router } from "react-router-dom";
 
@@ -17,8 +17,8 @@ function App() {
     <>
     <Helmet>
     <title>SaghiOMey</title>
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="icon" href={ico} />
+    <meta name="description" content="Podcast SaghiOMey" />
+    <meta property="og:title" key="og:title" content="SaghiOMey" />
     </Helmet>
     <Router>
     <Header episodes={episodes} reviews = {Reviews} />
