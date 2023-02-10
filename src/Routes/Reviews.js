@@ -141,12 +141,12 @@ export default function Reviews(props) {
                     </div>
                     <div className="flex place-content-between items-end">
                     <div className="flex ml-4 font-semibold text-base">
-              <TwitterShareButton url={"/"}>
+              <TwitterShareButton url="https://saghiomey.netlify.app/#/Reviews">
                 <TwitterIcon size={40} round={true} />
               </TwitterShareButton>
                     </div>
                     <div className="flex mr-4 font-semibold text-base">
-              <FacebookShareButton url={"/"}>
+              <FacebookShareButton url="https://saghiomey.netlify.app/#/Reviews">
                 <FacebookIcon size={40} round={true} />
               </FacebookShareButton>
                     </div>

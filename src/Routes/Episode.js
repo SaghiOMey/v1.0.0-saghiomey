@@ -62,6 +62,7 @@ export default function Episode(props) {
           <title>{result.describtion}</title>
           <meta property="og:title" key="og:title" content={result.name}/>
           <meta property="og:description" key="og:description" content={result.describtion} />
+          <meta property="og:image" key="og:image" content={result.img} />
         </Helmet>
         <div className="relative">
           <img className="bg-cover h-96 md:h-auto" src={sky} alt="sky" />
@@ -169,7 +170,7 @@ export default function Episode(props) {
                       <LinkedinShareButton url={result.eplink} title={result.name} summary={result.describtion}>
                         <LinkedinIcon size={40} round={true} />
                       </LinkedinShareButton>
-                      <PinterestShareButton url={result.eplink} description={result.describtion}>
+                      <PinterestShareButton url={result.eplink}>
                         <PinterestIcon size={40} round={true} />
                       </PinterestShareButton>
                       </div>
