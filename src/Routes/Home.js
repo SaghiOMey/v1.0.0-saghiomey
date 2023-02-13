@@ -5,6 +5,8 @@ import Desert from "../Desert.jpg";
 // import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
+import googlepodcast from "../googlepodcast.svg";
+import castbox from "../castbox.svg";
 import Footer from "../Components/Footer";
 import { NavLink } from "react-router-dom";
 import { Fragment, useRef, useState } from 'react'
@@ -83,14 +85,20 @@ export default function Home(props) {
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
                         <div className="flex mt-4 ml-6 justify-between">
-                  <a href="#">
+                  <a href="https://www.youtube.com/@Saghiomey?sub_confirmation=1">
                     <img src={youtube} className="h-12 w-12 rounded-full" />
                   </a>
                   {/* <a href="#">
                     <img src={apple} className="h-12 w-12" />
                   </a> */}
-                  <a href="#">
+                  <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
                     <img src={spotify} className="h-12 w-12" />
+                  </a>
+                  <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw%3D%3D">
+                    <img src={googlepodcast} className="h-12 w-12" />
+                  </a>
+                  <a href="https://castbox.fm/channel/Saghi.O.Mey-%7C%7C-%D8%B3%D8%A7%D9%82%DB%8C-%D9%88-%D9%85%DB%8C-id4931691?country=gb">
+                    <img src={castbox} className="h-12 w-12" />
                   </a>
                   </div>
                         </p>

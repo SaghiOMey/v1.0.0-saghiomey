@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet';
 // import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
+import googlepodcast from "../googlepodcast.svg";
 import share from "../share.svg";
 import copy from "../copy.svg";
 import done from "../done.svg";
@@ -230,6 +231,10 @@ export default function Persian(props) {
            <img src={apple} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Apple Podcasts</span>
           </a> */}
+          <a href={result.googlepodcast} className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
+           <img src={googlepodcast} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
+           <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Google Podcasts</span>
+          </a>
           <a href={result.spotify} className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
            <img src={spotify} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
            <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Spotify</span>
