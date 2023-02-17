@@ -1,92 +1,101 @@
 [
     {
       "id": 1,
-      "platform": "Apple Podcasts",
-      "epname": "Saghi.O.Mey",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/Saghi.O.Mey", 
-      "describtion": "In this episode, the program and the servant are introduced",
-      "date": "Mar 19, 2022"
-    },
-    {
-      "id": 2,
-      "platform": "Apple Podcasts",
-      "epname": "From university to the work - Reza Dehghan",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/From-university-to-the-work-Reza-Dehghan", 
-      "describtion": "When the university is over and we want to enter the labor market, we address the problems that arise",
-      "date": "Jun 17, 2022"
-    },
-    {
-      "id": 3,
-      "platform": "Apple Podcasts",
-      "epname": "Cryptocurrency - Nadia Mousavi",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/Cryptocurrency-Nadia-Mousavi", 
-      "describtion": "Things to know about this cryptocurrency and stock market",
-      "date": "Jun 22, 2022"
-    },
-    {
-      "id": 4,
-      "platform": "Apple Podcasts",
+      "platform": "Linkedin",
       "epname": "Organizational Psychology - Zakiyeh Hoseinpour",
-      "username": "Amir",
+      "username": "Soroush Shariaty",
       "link": "https://saghiomey.netlify.app/Organizational-Psychology-Zakiyeh-Hoseinpour", 
-      "describtion": "What is organizational psychology, how do they work and how popular is it in the community?",
+      "describtion": "👌",
       "date": "Jun 27, 2022"
     },
     {
+      "id": 2,
+      "platform": "Linkedin",
+      "epname": "Organizational Psychology - Zakiyeh Hoseinpour",
+      "username": "aida oladzad",
+      "link": "https://saghiomey.netlify.app/Organizational-Psychology-Zakiyeh-Hoseinpour", 
+      "describtion": "👌🏻👌🏻",
+      "date": "Jun 27, 2022"
+    },
+    {
+      "id": 3,
+      "platform": "Linkedin",
+      "epname": "Organizational Psychology - Zakiyeh Hoseinpour",
+      "username": "raheleh aminy",
+      "link": "https://saghiomey.netlify.app/Organizational-Psychology-Zakiyeh-Hoseinpour", 
+      "describtion": "😍😍👌🏻Zakiyeh Hoseinpour",
+      "date": "Jun 27, 2022"
+    },
+    {
+      "id": 4,
+      "platform": "Linkedin",
+      "epname": "Challenges of learning English - Anahita Karimi",
+      "username": "Zahra Ghareguzloo",
+      "link": "https://saghiomey.netlify.app/#/Challenges-of-learning-English-Anahita-Karimi", 
+      "describtion": "👌👌",
+      "date": "Aug 16, 2022"
+    },
+    {
       "id": 5,
-      "platform": "Apple Podcasts",
-      "epname": "relationships between girls and boys - Roya",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/relationships-between-girls-and-boys-Roya", 
-      "describtion": "Talk to Roya about romantic relationships and leading topics",
-      "date": "Jun 29, 2022"
+      "platform": "Linkedin",
+      "epname": "Honor killings - Sanaz Sadid",
+      "username": "Zahra Ghareguzloo",
+      "link": "https://saghiomey.netlify.app/#/Honor-killings-Sanaz-Sadid", 
+      "describtion": "🤩🤩🤩🤩",
+      "date": "Aug 20, 2022"
     },
     {
       "id": 6,
-      "platform": "Apple Podcasts",
-      "epname": "Generational differences - Saba Mostamand",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/Generational-differences-Saba-Mostamand", 
-      "describtion": "Talk to Saba about the current generation and previous generations",
-      "date": "Jun 30, 2022"
+      "platform": "Linkedin",
+      "epname": "Architecture - Dorsa Ahadi",
+      "username": "Dorsa Ahadi",
+      "link": "https://saghiomey.netlify.app/#/Architecture-Dorsa-Ahadi", 
+      "describtion": "Thank you alot 🙏🏻🙏🏻🙏🏻🙏🏻",
+      "date": "Oct 15, 2022"
     },
     {
       "id": 7,
-      "platform": "Apple Podcasts",
-      "epname": "Problems of women in society - Dr. Aylin Tarighi",
+      "platform": "Linkedin",
+      "epname": "UI-UX in Metaverse - Banafsheh Soleimanpourian",
       "username": "Amir",
-      "link": "https://saghiomey.netlify.app/Problems-of-women-in-society-Dr.-Aylin-Tarighi", 
-      "describtion": "A conversation about womens problems in society with Dr. Aylin Tarighi",
-      "date": "Jul 1, 2022"
+      "link": "https://saghiomey.netlify.app/#/UI-UX-in-Metaverse-Banafsheh-Soleimanpourian", 
+      "describtion": "Fabulous 😍😋 thanks for sharing ",
+      "date": "Nov 5, 2022"
     },
     {
       "id": 8,
-      "platform": "Apple Podcasts",
-      "epname": "Nostalgia - Meysam",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/Nostalgia-Meysam", 
-      "describtion": "Talking about nostalgia with Meysam",
-      "date": "Jul 3, 2022"
+      "platform": "Linkedin",
+      "epname": "UI-UX in Metaverse - Banafsheh Soleimanpourian",
+      "username": "Vote Frenzy",
+      "link": "https://saghiomey.netlify.app/#/UI-UX-in-Metaverse-Banafsheh-Soleimanpourian", 
+      "describtion": "Mohammadreza khorrami Awesome! Thanks for Sharing! ⚡",
+      "date": "Nov 5, 2022"
     },
     {
       "id": 9,
-      "platform": "Apple Podcasts",
-      "epname": "A conversation with Sarah about cinema",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/A-conversation-with-Sarah-about-cinema", 
-      "describtion": "Discussion of cinema and Christopher Nolans films",
-      "date": "Jul 5, 2022"
+      "platform": "Linkedin",
+      "epname": "UI-UX in Metaverse - Banafsheh Soleimanpourian",
+      "username": "Banafsheh Soleimanpourian",
+      "link": "https://saghiomey.netlify.app/#/UI-UX-in-Metaverse-Banafsheh-Soleimanpourian", 
+      "describtion": "I hope it will become useful for all.😍",
+      "date": "Nov 5, 2022"
     },
     {
       "id": 10,
-      "platform": "Apple Podcasts",
-      "epname": "Mind game - Nosheen",
-      "username": "Amir",
-      "link": "https://saghiomey.netlify.app/Mind-game-Nosheen", 
-      "describtion": "A conversation with Nosheen about the mind game",
-      "date": "Jul 7, 2022"
+      "platform": "Linkedin",
+      "epname": "Shadow - Narges Taheri",
+      "username": "narges taheri",
+      "link": "https://saghiomey.netlify.app/#/Shadow-Narges-Taheri", 
+      "describtion": "🙏🏻🙏🏻tnx",
+      "date": "Dec 10, 2022"
+    },
+    {
+      "id": 11,
+      "platform": "Linkedin",
+      "epname": "A total of British artists - Shahrzad Akbari",
+      "username": "Shahrzad Akbari",
+      "link": "https://saghiomey.netlify.app/#/A-total-of-British-artists-Shahrzad-Akbari", 
+      "describtion": "Great talk✌️🏼 thanks for the invite 🙏🏻🌹",
+      "date": "Jan 14, 2023"
     }
   ]

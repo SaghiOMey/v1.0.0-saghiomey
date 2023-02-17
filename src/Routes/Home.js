@@ -155,7 +155,7 @@ export default function Home(props) {
                 </a>
                 <a
                   className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
-                  href="#"
+                  href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ export default function Home(props) {
                 </a>
                 <a
                   className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
-                  href="#"
+                  href="https://www.instagram.com/milad_podcast/"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +181,7 @@ export default function Home(props) {
                 </a>
                 <a
                   className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
-                  href="#"
+                  href="https://www.linkedin.com/in/mohammadreza-khorrami-238302215/"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

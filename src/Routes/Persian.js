@@ -233,7 +233,7 @@ export default function Persian(props) {
           </a> */}
           <a href={result.googlepodcast} className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
            <img src={googlepodcast} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
-           <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Google Podcasts</span>
+           <span className="text-black font-bold text-xs md:text-base mt-3 md:mt-1 hover:text-white">Google Podcasts</span>
           </a>
           <a href={result.spotify} className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0">
            <img src={spotify} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
@@ -249,11 +249,11 @@ export default function Persian(props) {
                 <span className="font-normal font-sans text-white lg:text-2xl">CastBox-</span><a href={result.castbox} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.castbox}</a><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">You can watch this interview on YouTube</span><a href={result.youtube} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.youtube}</a><br /><br />
                 <span className="font-normal font-sans text-white lg:text-2xl">Follow us on Social Media for the latest show updates</span><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">Twitter</a><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">Instagram</a><br /><br />
+                {/* <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">Twitter</a><br /><br /> */}
+                <a href="https://www.instagram.com/milad_podcast/" className="font-normal font-sans text-yellow-500 lg:text-2xl">Instagram</a><br /><br />
                 <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">Facebook</a><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">SaghiOMey</a><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">YouTube</a><br /><br />
+                <a href="https://saghiomey.netlify.app" className="font-normal font-sans text-yellow-500 lg:text-2xl">SaghiOMey</a><br /><br />
+                <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ" className="font-normal font-sans text-yellow-500 lg:text-2xl">YouTube</a><br /><br />
                 <Footer lastepisode = {lastepisode} />
           </div>
           </div>

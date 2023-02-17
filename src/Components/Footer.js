@@ -55,18 +55,18 @@ export default function Footer(lastepisode) {
                   {/* <a href="#">
                     <img src={apple} className="h-8 w-8" />
                   </a> */}
-                  <a href="#">
+                  <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ">
                     <img src={youtube} className="h-8 w-8" />
                   </a>
-                  <a href="#">
+                  <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp">
                     <img src={spotify} className="h-8 w-8" />
                   </a>
                   </div>
                   <div className="flex justify-center mt-4 md:ml-6 gap-3">
-                  <a href="#">
+                  <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw?ep=14">
                     <img src={googlepodcast} className="h-8 w-8 rounded-full bg-white" />
                   </a>
-                  <a href="#">
+                  <a href="https://castbox.fm/channel/id4931691?country=gb">
                     <img src={castbox} className="h-8 w-8" />
                   </a>
                   </div>
@@ -105,18 +105,18 @@ export default function Footer(lastepisode) {
                   {/* <a href="#">
                     <img src={apple} className="h-8 w-8" />
                   </a> */}
-                  <a href="#">
+                  <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ">
                     <img src={youtube} className="h-8 w-8" />
                   </a>
-                  <a href="#">
+                  <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp">
                     <img src={spotify} className="h-8 w-8" />
                   </a>
                   </div>
                   <div className="flex justify-center mt-4 md:ml-6 gap-3">
-                  <a href="#">
+                  <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw?ep=14">
                     <img src={googlepodcast} className="h-8 w-8 rounded-full bg-white" />
                   </a>
-                  <a href="#">
+                  <a href="https://castbox.fm/channel/id4931691?country=gb">
                     <img src={castbox} className="h-8 w-8" />
                   </a>
                   </div>

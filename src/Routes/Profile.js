@@ -32,11 +32,11 @@ export default function Profile(props) {
           <div>
             <div className="mx-auto text-center md:text-justify max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <span className="font-normal font-sans text-white text-2xl">Follow us on Social Media for the latest show updates</span><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Twitter</a><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Instagram</a><br /><br />
+                {/* <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Twitter</a><br /><br /> */}
+                <a href="https://www.instagram.com/milad_podcast/" className="font-normal font-sans text-yellow-500 text-2xl">Instagram</a><br /><br />
                 <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Facebook</a><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">SaghiOMey</a><br /><br />
-                <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">YouTube</a><br /><br />
+                <a href="https://saghiomey.netlify.app" className="font-normal font-sans text-yellow-500 text-2xl">SaghiOMey</a><br /><br />
+                <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ" className="font-normal font-sans text-yellow-500 text-2xl">YouTube</a><br /><br />
                 <Footer lastepisode = {lastepisode} /> 
             </div>
           </div>
