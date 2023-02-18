@@ -30,6 +30,8 @@ import Profile from "../Routes/Profile";
 import Reviews from "../Routes/Reviews";
 import OneSignal from 'react-onesignal';
 import Contact from "../Routes/Contact";
+import emailjs from '@emailjs/browser';
+import { AudioRecorder, useAudioRecorder } from 'react-audio-voice-recorder';
 
 
 
@@ -39,9 +41,12 @@ function classNames(...classes) {
 
 
 export default function Header(props) {
+  const form1 = useRef();
+
   const { pathname } = useLocation();
   const [Open, setOpen] = useState(false)
   const [Search, setSearch] = useState(false)
+  const [audio, setAudio] = useState("")
   let [Name, setName] = useState("")
   const handleChange = (e) => {
     setName (e.target.value);
@@ -74,8 +79,30 @@ export default function Header(props) {
       appId: "62e0bd67-f20e-4491-b24f-a27b58d7cdfc"
     });
   }, [])
+
+  const recorderControls = useAudioRecorder();
+  const addAudioElement = (blob) => {
+    const url = URL.createObjectURL(blob);
+    // const audio = document.createElement('input');
+    // audio.src = url;
+    // audio.name = "audio";
+    // audio.controls = true;
+    setAudio(url);
+    // console.log(audio.src)
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+  emailjs.sendForm('service_75ytjo7', 'template_7ek1l64', form1.current, 'Lp5sE4yuq_l5oKBod')
+  .then((result) => {
+    setOpen(true)
+    console.log(result.text);
+}, (error) => {
+    console.log(error.text);
+});
+};
   
-console.log(current());
+console.log(audio);
 
   return (
     <div>
@@ -303,6 +330,17 @@ console.log(current());
         </>
       )}
     </Disclosure>
+    <AudioRecorder
+        onRecordingComplete={(blob) => addAudioElement(blob)}
+        recorderControls={recorderControls}
+      />
+    {audio.length ?
+    <form ref={form1} onSubmit={sendEmail}>
+    <input className="hidden" name="audio" value={audio} />
+    <input type="submit" value="Send" />
+  </form>
+  : ""
+    }
   <Routes>
   <Route path="Profile" element={<Profile episode = {props.episodes} />} />
   <Route path="Reviews" element={<Reviews reviews = {filterReviews} episode = {props.episodes}  />} />
