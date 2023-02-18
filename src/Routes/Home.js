@@ -12,6 +12,7 @@ import { NavLink } from "react-router-dom";
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Card from "../Components/Card";
+import Voice from "../Components/voice";
 
 
 
@@ -26,6 +27,8 @@ export default function Home(props) {
   return (
     <>
       <div className="relative">
+      <Voice />
+
         <img className="bg-cover" src={Desert} alt="Desert" />
         <div className="absolute top-44 left-20 lg:top-36 md:top-12 md:left-1/2">
           <div className="font-mono font-bold text-xs md:text-4xl text-white">
@@ -283,7 +286,6 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-
         <div className="absolute mt-48 md:top-2/3 lg:top-3/4 w-full min-h-max bg-black">
             <div className="mx-auto text-center max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                <Card episodes = {episodes} />
