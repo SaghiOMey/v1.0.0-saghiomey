@@ -14,12 +14,28 @@ export default function About(props) {
         </div>
         <div className="absolute text-center -top-12 md:top-16 lg:top-2/4 mt-32 w-full min-h-max bg-black">
           <div className="lg:mb-56 mt-12 lg:ml-20 leading-8 text-gray-200">
-            <span className="text-2xl md:text-4xl font-sans font-bold">About The Show</span><br /><br />
-            <span className="text-2xl md:text-4xl font-sans font-bold">INTERVIEWS with GUESTS FROM THE WORLD</span><br /><br />
-            <span className="text-2xl md:text-4xl font-sans font-bold">Host</span><br /><br /><br />
-            <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">Join Host Milad as he talks to various guests each week where ”Everyone Has A Story” from the world.</span>
+            <span className="text-2xl md:text-4xl font-sans font-bold">
+              About The Show
+            </span>
+            <br />
+            <br />
+            <span className="text-2xl md:text-4xl font-sans font-bold">
+              INTERVIEWS with GUESTS FROM THE WORLD
+            </span>
+            <br />
+            <br />
+            <span className="text-2xl md:text-4xl font-sans font-bold">
+              Host
+            </span>
+            <br />
+            <br />
+            <br />
+            <span className="text-xl md:text-2xl text-gray-400 font-sans font-bold">
+              Join Host Milad as he talks to various guests each week where
+              ”Everyone Has A Story” from the world.
+            </span>
           </div>
-          <Footer lastepisode = {lastepisode} />
+          <Footer lastepisode={lastepisode} />
         </div>
       </div>
     </>

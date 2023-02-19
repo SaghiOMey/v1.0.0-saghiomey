@@ -1,12 +1,8 @@
 import { useState } from "react";
 
-import {
-  nameValidator,
-  emailValidator,
-  messageValidator,
-} from "./validators";
+import { nameValidator, emailValidator, messageValidator } from "./validators";
 
-const touchErrors = errors => {
+const touchErrors = (errors) => {
   return Object.entries(errors).reduce((acc, [field, fieldError]) => {
     acc[field] = {
       ...fieldError,
@@ -16,7 +12,7 @@ const touchErrors = errors => {
   }, {});
 };
 
-export const useFormContact = form => {
+export const useFormContact = (form) => {
   const [errors, setErrors] = useState({
     name: {
       dirty: false,
@@ -43,8 +39,8 @@ export const useFormContact = form => {
 
     // Force validate all the fields
     if (forceTouchErrors) {
-        nextErrors = touchErrors(errors);
-      }
+      nextErrors = touchErrors(errors);
+    }
 
     const { name, email, message } = form;
 
@@ -63,11 +59,11 @@ export const useFormContact = form => {
     }
 
     if (nextErrors.message.dirty && (field ? field === "message" : true)) {
-        const messageMessage = messageValidator(message, form);
-        nextErrors.message.error = !!messageMessage;
-        nextErrors.message.message = messageMessage;
-        if (!!messageMessage) isValid = false;
-      }
+      const messageMessage = messageValidator(message, form);
+      nextErrors.message.error = !!messageMessage;
+      nextErrors.message.message = messageMessage;
+      if (!!messageMessage) isValid = false;
+    }
 
     setErrors(nextErrors);
 
@@ -77,7 +73,7 @@ export const useFormContact = form => {
     };
   };
 
-  const onBlurField = e => {
+  const onBlurField = (e) => {
     const field = e.target.name;
     const fieldError = errors[field];
     if (fieldError.dirty) return;
