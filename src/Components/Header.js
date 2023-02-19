@@ -30,6 +30,7 @@ import Profile from "../Routes/Profile";
 import Reviews from "../Routes/Reviews";
 import OneSignal from 'react-onesignal';
 import Contact from "../Routes/Contact";
+import Voice from "./voice";
 
 
 function classNames(...classes) {
@@ -317,6 +318,7 @@ export default function Header(props) {
   <Route path="EnglishEpisodes/*" element={<AudioEnglishInterviews episodes = {props.episodes} episode = {props.episodes} />} />
   <Route path="PersianEpisodes/*" element={<AudioPersianInterviews episodes = {filterNames} episode = {props.episodes} />} />
   </Routes>
+  <Voice />
     </div>
   );
 }

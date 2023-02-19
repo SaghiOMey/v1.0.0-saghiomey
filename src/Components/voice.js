@@ -35,7 +35,7 @@ axios({ url: audio, method: 'GET',responseType: 'blob',}).then((response) => {co
 
 };
   return (
-    <div className="flex justify-end fixed top-3/4 right-4">
+    <div className="flex justify-end fixed top-3/4 mt-24 right-4">
     <AudioRecorder className="bg-yellow-500	"
         onRecordingComplete={(blob) => addAudioElement(blob)}
         recorderControls={recorderControls}
