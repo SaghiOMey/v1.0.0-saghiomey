@@ -11,7 +11,7 @@ export default function AudioPersianInterviews(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover" src={nightsky} alt="nightsky" />
+        <img className="bg-cover xl:w-full" src={nightsky} alt="nightsky" />
         <div className="absolute grid justify-items-center top-8 md:top-28 w-full text-white">
           <span className="text-lg md:text-5xl font-sans font-bold">
             Persian Episodes

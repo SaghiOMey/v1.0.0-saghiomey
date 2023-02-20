@@ -70,7 +70,7 @@ export default function Persian(props) {
         <meta property="og:image" key="og:image" content={result.img} />
       </Helmet>
       <div className="relative">
-        <img className="bg-cover h-96 md:h-auto" src={sky} alt="sky" />
+        <img className="bg-cover h-96 md:h-auto xl:w-full" src={sky} alt="sky" />
         <div className="absolute grid justify-items-center md:justify-items-start w-full text-white">
           <img
             src={result.img}

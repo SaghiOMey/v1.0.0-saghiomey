@@ -22,7 +22,7 @@ export default function Home(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover" src={Desert} alt="Desert" />
+        <img className="bg-cover xl:w-full" src={Desert} alt="Desert" />
         <div className="absolute top-44 left-20 lg:top-36 md:top-12 md:left-1/2">
           <div className="font-mono font-bold text-xs md:text-4xl text-white">
             Podcast SaghiOMey{" "}

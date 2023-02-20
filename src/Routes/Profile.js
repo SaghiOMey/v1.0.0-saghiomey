@@ -11,7 +11,7 @@ export default function Profile(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover" src={Desert} alt="Desert" />
+        <img className="bg-cover xl:w-full" src={Desert} alt="Desert" />
         <div className="absolute md:flex md:justify-between top-4 left-12 xl:top-80 lg:top-60 md:top-44">
           <img
             className="h-40 md:h-2/6 md:w-2/6 rounded"
