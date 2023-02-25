@@ -910,5 +910,24 @@
     "googlepodcast": "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw/episode/NWQ3NzUyZjctMDg2Mi00NzI1LTg0NmYtMTdhZGQzNzFjMjdi?",
     "apple": "#",
     "castbox": "https://castbox.fm/episode/Freelance-with-foreign-companies---Sara-Nafisi(Episode-47)-id4931691-id572350706?"
+  },
+  {
+    "id": 49,
+    "ln": "pa",
+    "name": "Fashion Design - Shaghayegh Farokhpoor",
+    "img": "https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded/22745765/22745765-1673944612760-1d57f610e6e73.jpg",
+    "eplink": "https://saghiomey.netlify.app/#/Fashion-Design-Shaghayegh-Farokhpoor",
+    "href": "Fashion-Design-Shaghayegh-Farokhpoor",
+    "describtion": "A conversation with dear Shaghayegh about the world of fashion",
+    "date": "Feb 25, 2023",
+    "time": "59:20",
+    "voice": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2023-1-23/314384309-22050-1-f25f6bab5e106.m4a",
+    "video": "https://www.youtube.com/embed/fATcJ6zfUSU",
+    "youtube": "https://youtu.be/fATcJ6zfUSU",
+    "anchor": "https://spotifyanchor-web.app.link/e/lNojHbpqHxb",
+    "spotify": "https://open.spotify.com/episode/1OwrDLGnnQ46tlxPHtqq3q?si=39ba8d3065b64e26",
+    "googlepodcast": "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw/episode/ZWFiNDQ2NmQtZTU1NS00N2UzLWIxNjItMmI5ZTc2NzBmOGRl?",
+    "apple": "#",
+    "castbox": "https://castbox.fm/episode/Fashion-Design---Shaghayegh-Farokhpoor-(Episode-48)-id4931691-id573950654?"
   }
 ]
