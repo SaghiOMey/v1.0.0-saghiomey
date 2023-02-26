@@ -28,6 +28,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Profile from "../Routes/Profile";
 import Reviews from "../Routes/Reviews";
+import NFT from "../Routes/NFT";
 import OneSignal from "react-onesignal";
 import Contact from "../Routes/Contact";
 import Voice from "./voice";
@@ -324,6 +325,20 @@ export default function Header(props) {
                           {({ active }) => (
                             // eslint-disable-next-line jsx-a11y/anchor-is-valid
                             <NavLink
+                              to="NFT"
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-yellow-500"
+                              )}
+                            >
+                              NFT
+                            </NavLink>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                            <NavLink
                               to="Reviews"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
@@ -376,6 +391,10 @@ export default function Header(props) {
         <Route
           path="Reviews"
           element={<Reviews reviews={filterReviews} episode={props.episodes} />}
+        />
+        <Route
+          path="NFT"
+          element={<NFT reviews={filterReviews} episode={props.episodes} />}
         />
         <Route path="About" element={<About episodes={props.episodes} />} />
         <Route path="Contact" element={<Contact episodes={props.episodes} />} />

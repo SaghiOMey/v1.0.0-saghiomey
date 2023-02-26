@@ -25,10 +25,12 @@ export default function Footer(lastepisode) {
     { name: "About", href: "About", current: false },
     { name: "Contact", href: "Contact", current: false },
   ];
- 
+
   return (
     <>
-      {pathname === "/About" || pathname === "/Contact" ? (
+      {pathname === "/About" ||
+      pathname === "/Contact" ||
+      pathname === "/NFT" ? (
         <div className="md:flex mt-36 md:justify-between mx-auto text-center max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <span className="text-gray-300 text-lg font-medium">
             Recent Episodes
