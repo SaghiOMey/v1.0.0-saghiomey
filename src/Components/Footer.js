@@ -1,3 +1,4 @@
+/* eslint-disable no-self-compare */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // import apple from "../apple.svg";
@@ -28,9 +29,7 @@ export default function Footer(lastepisode) {
 
   return (
     <>
-      {pathname === "/About" ||
-      pathname === "/Contact" ||
-      pathname === "/NFT" ? (
+      {pathname === pathname ? (
         <div className="md:flex mt-36 md:justify-between mx-auto text-center max-w-2xl py-16 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <span className="text-gray-300 text-lg font-medium">
             Recent Episodes
