@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// import logo from "../saghimey.jpg";
 import nightsky from "../nightsky.jpg";
 import Footer from "../Components/Footer";
 import Card from "../Components/Card";

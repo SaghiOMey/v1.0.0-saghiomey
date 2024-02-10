@@ -63,7 +63,6 @@ export default function Persian(props) {
             </a>
             <br />
             <br />
-            {/* <span className="font-normal font-sans text-white lg:text-2xl">Spotify-</span><a href={result.spotify} className="font-normal font-sans text-yellow-500 lg:text-2xl">{result.spotify}</a><br /><br /> */}
             <span className="font-normal font-sans text-white lg:text-2xl">
               ApplePodcast-
             </span>
@@ -91,7 +90,6 @@ export default function Persian(props) {
             </span>
             <br />
             <br />
-            {/* <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">Twitter</a><br /><br /> */}
             <a
               href="https://www.instagram.com/milad_podcast/"
               className="font-normal font-sans text-yellow-500 lg:text-2xl"

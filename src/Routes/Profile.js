@@ -45,7 +45,6 @@ export default function Profile(props) {
               </span>
               <br />
               <br />
-              {/* <a href="#" className="font-normal font-sans text-yellow-500 text-2xl">Twitter</a><br /><br /> */}
               <a
                 href="https://www.instagram.com/milad_podcast/"
                 className="font-normal font-sans text-yellow-500 text-2xl"

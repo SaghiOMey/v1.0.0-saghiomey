@@ -10,7 +10,6 @@ import { Dialog } from "@headlessui/react";
 import { Transition } from "@headlessui/react";
 import sky from "../sky.jpg";
 import { Helmet } from "react-helmet";
-// import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
@@ -49,7 +48,6 @@ export default function Persian(props) {
   const result = episodes.find(
     (episode) => episode.href === pathname.replace("/PersianEpisodes/", "")
   );
-  console.log(result);
 
   return (
     <>
@@ -284,10 +282,6 @@ export default function Persian(props) {
                 YouTube
               </span>
             </a>
-            {/* <a href="#" className="flex bg-white h-12 w-44 rounded hover:bg-opacity-0">
-           <img src={apple} className="h-8 w-8 mt-2 ml-2" />&nbsp;&nbsp;
-           <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">Apple Podcasts</span>
-          </a> */}
             <a
               href={result.googlepodcast}
               className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0"
@@ -360,7 +354,6 @@ export default function Persian(props) {
             </span>
             <br />
             <br />
-            {/* <a href="#" className="font-normal font-sans text-yellow-500 lg:text-2xl">Twitter</a><br /><br /> */}
             <a
               href="https://www.instagram.com/milad_podcast/"
               className="font-normal font-sans text-yellow-500 lg:text-2xl"

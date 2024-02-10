@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import Desert from "../Desert.jpg";
-// import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
@@ -102,9 +101,6 @@ export default function Home(props) {
                                           className="h-12 w-12 rounded-full"
                                         />
                                       </a>
-                                      {/* <a href="#">
-                    <img src={apple} className="h-12 w-12" />
-                  </a> */}
                                       <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
                                         <img
                                           src={spotify}
@@ -150,19 +146,6 @@ export default function Home(props) {
               <br />
               <p className="font-mono flex font-bold lg:ml-56 lg:text-lg text-gray-100">
                 Follow US: &nbsp;
-                {/* <a
-                  className="text-yellow-500 hover:text-white fill-current"
-                  href="#"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                  </svg>
-                </a> */}
                 <a
                   className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="https://www.facebook.com/profile.php?id=100089930657614"

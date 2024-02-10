@@ -1,7 +1,6 @@
 /* eslint-disable no-self-compare */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
@@ -66,9 +65,6 @@ export default function Footer(lastepisode) {
           <span className="text-gray-300 text-lg font-medium">
             Follow Our Show
             <div className="flex justify-center gap-3 mt-4">
-              {/* <a href="#">
-                    <img src={apple} className="h-8 w-8" />
-                  </a> */}
               <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ">
                 <img src={youtube} className="h-8 w-8" />
               </a>
@@ -126,9 +122,6 @@ export default function Footer(lastepisode) {
           <span className="text-gray-300 text-lg font-medium">
             Follow Our Show
             <div className="flex justify-center gap-3 mt-4">
-              {/* <a href="#">
-                    <img src={apple} className="h-8 w-8" />
-                  </a> */}
               <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ">
                 <img src={youtube} className="h-8 w-8" />
               </a>

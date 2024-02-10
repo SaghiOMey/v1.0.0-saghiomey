@@ -24,19 +24,8 @@ export default function NFT(props) {
         img: "https://i.seadn.io/gcs/files/824a750c60cecdae055fe3a29704235d.png?auto=format&w=1000",
         date: "May 28",
         expire: "May 28, 2023",
-        link: "https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/34451397322601742123712235644046916536807054080760084198907560899270500417537/",
+        link: "/",
       },
-      // {
-      //   id: 2,
-      //   name: "So you've bought coffee... now what?",
-      //   describtion: "Does drinking coffee make you smarter?",
-      //   price: "0.62 ETH, $992.79",
-      //   creator: "Milad",
-      //   img: logo,
-      //   date: "Mar 26",
-      //   expire: "March 5, 2023",
-      //   link: "#",
-      // },
     ],
     Audio: [
       {
@@ -49,19 +38,8 @@ export default function NFT(props) {
         img: "https://i.seadn.io/gcs/files/3e83fe2a43a75496bc263080d4adc95a.png?auto=format&w=1000",
         date: "May 28",
         expire: "May 28, 2023",
-        link: "https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/34451397322601742123712235644046916536807054080760084198907560900370012045313/",
+        link: "/",
       },
-      // {
-      //   id: 2,
-      //   name: "The most innovative things happening in coffee",
-      //   describtion: "Does drinking coffee make you smarter?",
-      //   price: "0.62 ETH, $992.79",
-      //   creator: "Milad",
-      //   img: logo,
-      //   date: "Feb 26",
-      //   expire: "March 5, 2023",
-      //   link: "#",
-      // },
     ],
     Video: [
       {
@@ -74,19 +52,8 @@ export default function NFT(props) {
         img: "https://i.seadn.io/gcs/files/3e83fe2a43a75496bc263080d4adc95a.png?auto=format&w=1000",
         date: "May 28",
         expire: "May 28, 2023",
-        link: "https://opensea.io/assets/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/34451397322601742123712235644046916536807054080760084198907560901469523673089/",
+        link: "/",
       },
-      // {
-      //   id: 2,
-      //   name: "The worst advice we've ever heard about coffee",
-      //   describtion: "Does drinking coffee make you smarter?",
-      //   price: "0.62 ETH, $992.79",
-      //   creator: "Milad",
-      //   img: logo,
-      //   date: "Feb 26",
-      //   expire: "March 5, 2023",
-      //   link: "#",
-      // },
     ],
   });
   const lastepisode = props.episode.slice(-5).reverse();
@@ -165,7 +132,6 @@ export default function NFT(props) {
                   key={idx}
                   className={classNames(
                     "rounded-xl p-3",
-                    "ring-white ring-opacity-60 ring-offset-2 focus:outline-none focus:ring-2"
                   )}
                 >
                   <ul className="grid grid-cols-1 gap-y-4 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-4">

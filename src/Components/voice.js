@@ -1,13 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import { AudioRecorder, useAudioRecorder } from "react-audio-voice-recorder";
-// import axios from "axios";
 
 export default function Voice() {
-  const form1 = useRef();
   const [audio, setAudio] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -19,34 +16,6 @@ export default function Voice() {
     setAudio(url);
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_75ytjo7",
-        "template_7ek1l64",
-        form1.current,
-        "Lp5sE4yuq_l5oKBod"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    // axios({ url: audio, method: "GET", responseType: "blob" }).then(
-    //   (response) => {
-    //     const url = window.URL.createObjectURL(new Blob([response.data]));
-    //     const link = document.createElement("a");
-    //     link.href = url;
-    //     link.setAttribute("download", "file.mp3");
-    //     document.body.appendChild(link);
-    //     link.click();
-    //   }
-    // );
-  };
   return (
     <div className="flex justify-end fixed top-3/4 mt-24 right-4">
       <AudioRecorder
@@ -55,7 +24,7 @@ export default function Voice() {
         recorderControls={recorderControls}
       />
       {audio.length ? (
-        <form ref={form1} onSubmit={sendEmail}>
+        <form>
           <input className="hidden" name="audio" value={audio} />
           <div
             className={`relative z-10 ${open === true ? "block" : "hidden"}`}
@@ -95,6 +64,7 @@ export default function Voice() {
                   <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                     <button
                       onClick={() => setOpen(false)}
+                      disabled
                       type="submit"
                       value="Send"
                       className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"

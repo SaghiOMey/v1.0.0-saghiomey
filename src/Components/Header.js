@@ -15,9 +15,8 @@ import Persian from "../Routes/Persian";
 import Video from "../Routes/Video";
 import English from "../Routes/English";
 import VideoInterviews from "../Routes/VideoInterviews";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { Dialog } from "@headlessui/react";
-// import apple from "../apple.svg";
 import youtube from "../youtube.svg";
 import spotify from "../spotify.svg";
 import googlepodcast from "../googlepodcast.svg";
@@ -29,7 +28,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Profile from "../Routes/Profile";
 import Reviews from "../Routes/Reviews";
 import NFT from "../Routes/NFT";
-import OneSignal from "react-onesignal";
 import Contact from "../Routes/Contact";
 import Voice from "./voice";
 
@@ -89,11 +87,6 @@ export default function Header(props) {
     ));
   }
 
-  const Sub = useCallback(() => {
-    OneSignal.init({
-      appId: "62e0bd67-f20e-4491-b24f-a27b58d7cdfc",
-    });
-  }, []);
 
   return (
     <div>
@@ -103,7 +96,6 @@ export default function Header(props) {
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-32 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -197,9 +189,6 @@ export default function Header(props) {
                                                   className="h-12 w-12 rounded-full"
                                                 />
                                               </a>
-                                              {/* <a href="#">
-                    <img src={apple} className="h-12 w-12" />
-                  </a> */}
                                               <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
                                                 <img
                                                   src={spotify}
@@ -245,8 +234,8 @@ export default function Header(props) {
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 pt-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                   <button
-                    onClick={Sub}
                     type="button"
+                    disabled
                     className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -268,7 +257,6 @@ export default function Header(props) {
                     className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <span className="sr-only">View notifications</span>
-                    {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
                     <svg
                       aria-hidden="true"
                       focusable="false"
@@ -285,7 +273,6 @@ export default function Header(props) {
                       ></path>
                     </svg>
                   </button>
-                  {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800">
