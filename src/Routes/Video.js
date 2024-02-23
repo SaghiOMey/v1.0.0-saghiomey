@@ -19,12 +19,12 @@ export default function Persian(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover h-96 md:h-auto xl:w-full" src={sky} alt="sky" />
+        <img className="bg-cover grayscale h-96 md:h-auto xl:w-full" src={sky} alt="sky" />
         <div className="absolute grid justify-items-center md:justify-items-start xl:top-3/4 w-full text-white">
           <img
             src={result.img}
             alt="logo"
-            className="-mt-96 w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
+            className="-mt-96 grayscale w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
           />
           <p className="-mt-56 xl:-mt-96 lg:-mt-96 md:-mt-72 xl:ml-56 lg:ml-56 md:ml-56 justify-self-center xl:text-4xl lg:text-2xl md:text-xl font-bold">
             {result.name}

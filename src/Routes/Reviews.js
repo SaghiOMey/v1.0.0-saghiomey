@@ -3,12 +3,6 @@
 import nightsky from "../nightsky.jpg";
 import person from "../person.svg";
 import calendar from "../calendar.svg";
-import {
-  TwitterShareButton,
-  TwitterIcon,
-  FacebookShareButton,
-  FacebookIcon,
-} from "react-share";
 import { useState } from "react";
 import Footer from "../Components/Footer";
 
@@ -19,7 +13,7 @@ export default function Reviews(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover xl:w-full" src={nightsky} alt="nightsky" />
+        <img className="bg-cover grayscale xl:w-full" src={nightsky} alt="nightsky" />
         <div className="absolute grid justify-items-center top-8 md:top-28 w-full text-white">
           <span className="text-lg md:text-5xl font-sans font-bold">
             Reviews
@@ -46,7 +40,7 @@ export default function Reviews(props) {
                         <span className="absolute flex w-full justify-center font-medium text-sm text-gray-400">
                           {review.platform}
                         </span>
-                        <span className="ml-4 text-yellow-500 mt-8 lg:mt-4 flex fill-current">
+                        <span className="ml-4 text-gray-500 mt-8 lg:mt-4 flex fill-current">
                           <svg
                             clip-rule="evenodd"
                             fill-rule="evenodd"
@@ -151,18 +145,6 @@ export default function Reviews(props) {
                             {review.date}
                           </span>
                         </span>
-                      </div>
-                      <div className="flex place-content-between items-end">
-                        <div className="flex ml-4 font-semibold text-base">
-                          <TwitterShareButton url="https://saghiomey.netlify.app/#/Reviews">
-                            <TwitterIcon size={40} round={true} />
-                          </TwitterShareButton>
-                        </div>
-                        <div className="flex mr-4 font-semibold text-base">
-                          <FacebookShareButton url="https://saghiomey.netlify.app/#/Reviews">
-                            <FacebookIcon size={40} round={true} />
-                          </FacebookShareButton>
-                        </div>
                       </div>
                     </div>
                   ))}
@@ -178,7 +160,7 @@ export default function Reviews(props) {
                         <span className="absolute flex w-full justify-center font-medium text-sm text-gray-400">
                           {review.platform}
                         </span>
-                        <span className="ml-4 text-yellow-500 mt-8 lg:mt-4 flex fill-current">
+                        <span className="ml-4 text-gray-500 mt-8 lg:mt-4 flex fill-current">
                           <svg
                             clip-rule="evenodd"
                             fill-rule="evenodd"
@@ -284,18 +266,6 @@ export default function Reviews(props) {
                           </span>
                         </span>
                       </div>
-                      <div className="flex place-content-between items-end">
-                        <div className="flex ml-4 font-semibold text-base">
-                          <TwitterShareButton url={"/"}>
-                            <TwitterIcon size={40} round={true} />
-                          </TwitterShareButton>
-                        </div>
-                        <div className="flex mr-4 font-semibold text-base">
-                          <FacebookShareButton url={"/"}>
-                            <FacebookIcon size={40} round={true} />
-                          </FacebookShareButton>
-                        </div>
-                      </div>
                     </div>
                   ))}
                 </>
@@ -307,7 +277,7 @@ export default function Reviews(props) {
                   onClick={() =>
                     setEp([...props.reviews].reverse().slice(0, ep.length + 9))
                   }
-                  class="bg-yellow-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black"
+                  class="bg-gray-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black"
                 >
                   Load More
                 </button>

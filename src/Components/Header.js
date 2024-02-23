@@ -108,12 +108,12 @@ export default function Header(props) {
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <img
-                      className="block h-16 mb-20 w-auto lg:hidden"
+                      className="block grayscale h-16 mb-20 w-auto lg:hidden"
                       src={logo}
                       alt="SaghiOMey"
                     />
                     <img
-                      className="hidden h-16 w-auto lg:block"
+                      className="hidden grayscale h-16 w-auto lg:block"
                       src={logo}
                       alt="SaghiOMey"
                     />
@@ -126,8 +126,8 @@ export default function Header(props) {
                           key={item.name}
                           className={({ isActive }) =>
                             isActive
-                              ? "bg-gray-900 text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                              ? "bg-gray-900 text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                           }
                         >
                           {item.name}
@@ -135,7 +135,7 @@ export default function Header(props) {
                       ))}
                       <button
                         onClick={() => setOpen(true)}
-                        className="text-gray-300 hover:bg-gray-700 pointer hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-gray-300 hover:bg-gray-700 pointer hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                       >
                         Subscribe
                       </button>
@@ -183,30 +183,22 @@ export default function Header(props) {
                                         <div className="mt-2">
                                           <p className="text-sm text-gray-500">
                                             <div className="flex mt-4 ml-6 justify-between">
-                                              <a href="https://www.youtube.com/@Saghiomey?sub_confirmation=1">
                                                 <img
                                                   src={youtube}
-                                                  className="h-12 w-12 rounded-full"
+                                                  className="h-12 grayscale w-12 rounded-full"
                                                 />
-                                              </a>
-                                              <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
                                                 <img
                                                   src={spotify}
-                                                  className="h-12 w-12"
+                                                  className="h-12 grayscale w-12"
                                                 />
-                                              </a>
-                                              <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw%3D%3D">
                                                 <img
                                                   src={googlepodcast}
-                                                  className="h-12 w-12"
+                                                  className="h-12 grayscale w-12"
                                                 />
-                                              </a>
-                                              <a href="https://castbox.fm/channel/Saghi.O.Mey-%7C%7C-%D8%B3%D8%A7%D9%82%DB%8C-%D9%88-%D9%85%DB%8C-id4931691?country=gb">
                                                 <img
                                                   src={castbox}
-                                                  className="h-12 w-12"
+                                                  className="h-12 grayscale w-12"
                                                 />
-                                              </a>
                                             </div>
                                           </p>
                                         </div>
@@ -216,7 +208,7 @@ export default function Header(props) {
                                   <div className="bg-black px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                                     <button
                                       type="button"
-                                      className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                                      className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                                       onClick={() => setOpen(false)}
                                       ref={cancelButtonRef}
                                     >
@@ -236,7 +228,7 @@ export default function Header(props) {
                   <button
                     type="button"
                     disabled
-                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
@@ -245,7 +237,7 @@ export default function Header(props) {
                       type="search"
                       onChange={handleChange}
                       value={Name}
-                      class="form-control relative flex-auto min-w-0 block w-32 px-3 py-1.5 text-base font-normal bg-inherit text-gray-200 bg-clip-padding border-b border-solid border-b-yellow-500 transition ease-in-out m-0 focus:text-gray-200 focus:border-b-yellow-600	 focus:outline-none"
+                      class="form-control relative flex-auto min-w-0 block w-32 px-3 py-1.5 text-base font-normal bg-inherit text-gray-200 bg-clip-padding border-b border-solid border-b-gray-500 transition ease-in-out m-0 focus:text-gray-200 focus:border-b-yellow-600	 focus:outline-none"
                       placeholder="Search"
                       aria-label="Search"
                       aria-describedby="button-addon2"
@@ -254,7 +246,7 @@ export default function Header(props) {
                   <button
                     onClick={() => setSearch(!Search)}
                     type="button"
-                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <span className="sr-only">View notifications</span>
                     <svg
@@ -275,10 +267,10 @@ export default function Header(props) {
                   </button>
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
                         <img
-                          className="h-16 w-16 rounded-full"
+                          className="h-16 grayscale w-16 rounded-full"
                           src={profile}
                           alt="profile"
                         />
@@ -301,7 +293,7 @@ export default function Header(props) {
                               to="Profile"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700 hover:text-yellow-500"
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-gray-300"
                               )}
                             >
                               Profile
@@ -315,7 +307,7 @@ export default function Header(props) {
                               to="NFT"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700 hover:text-yellow-500"
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-gray-300"
                               )}
                             >
                               NFT
@@ -329,7 +321,7 @@ export default function Header(props) {
                               to="Reviews"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700 hover:text-yellow-500"
+                                "block px-4 py-2 text-sm text-gray-700 hover:text-gray-300"
                               )}
                             >
                               Reviews
@@ -353,7 +345,7 @@ export default function Header(props) {
                     onClick={current()}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-yellow-500"
+                        ? "bg-gray-900 text-gray-500"
                         : "text-gray-300 hover:bg-gray-700 hover:text-white",
                       "block px-3 py-2 rounded-md text-base font-medium"
                     )}
@@ -364,7 +356,7 @@ export default function Header(props) {
                 ))}
                 <button
                   onClick={() => setOpen(true)}
-                  className="text-gray-300 hover:bg-gray-700 pointer hover:text-yellow-500 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-300 hover:bg-gray-700 pointer hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Subscribe
                 </button>

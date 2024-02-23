@@ -60,7 +60,7 @@ export default function NFT(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover xl:w-full" src={nightsky} alt="nightsky" />
+        <img className="bg-cover grayscale xl:w-full" src={nightsky} alt="nightsky" />
         <div className="absolute grid justify-items-center top-8 md:top-28 w-full text-white">
           <span className="text-lg md:text-5xl font-sans font-bold">NFT</span>
           <div className="flex">
@@ -68,8 +68,8 @@ export default function NFT(props) {
               Available On:
             </span>
             <a
-              href="https://opensea.io/milad21"
-              className="text-yellow-500 mr-1 lg:mt-8 md:mt-0 lg:mr-2 md:mr-2 hover:text-white fill-current"
+              href="/"
+              className="text-gray-500 mr-1 lg:mt-8 md:mt-0 lg:mr-2 md:mr-2 hover:text-white fill-current"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +81,8 @@ export default function NFT(props) {
               </svg>
             </a>
             <a
-              className="text-yellow-500 mr-1 lg:mt-8 md:mt-0 lg:mr-2 md:mr-2 hover:text-white fill-current"
-              href="https://www.instagram.com/milad_podcast/"
+              className="text-gray-500 mr-1 lg:mt-8 md:mt-0 lg:mr-2 md:mr-2 hover:text-white fill-current"
+              href="/"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,8 +94,8 @@ export default function NFT(props) {
               </svg>
             </a>
             <a
-              className="text-yellow-500 mr-1 lg:mt-8 md:mt-0 hover:text-white fill-current"
-              href="https://www.facebook.com/profile.php?id=100089930657614"
+              className="text-gray-500 mr-1 lg:mt-8 md:mt-0 hover:text-white fill-current"
+              href="/"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ export default function NFT(props) {
                   key={category}
                   className={({ selected }) =>
                     classNames(
-                      "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-yellow-500",
+                      "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-gray-500",
                       "ring-opacity-60 ring-offset-2 focus:outline-none",
                       selected ? "shadow" : "text-blue-100 hover:text-white"
                     )
@@ -146,7 +146,7 @@ export default function NFT(props) {
                             <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-zinc-900 group-hover:opacity-75 lg:aspect-none lg:h-90">
                               <img
                                 src={post.img}
-                                className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded"
+                                className="h-full w-full grayscale object-cover object-center lg:h-full lg:w-full rounded"
                               />
                             </div>
                             <h1 className="flex justify-center text-sm font-medium leading-7 text-gray-200">

@@ -64,7 +64,7 @@ export default function Episode(props) {
       </Helmet>
       <div className="relative">
         <img
-          className="bg-cover h-96 md:h-auto xl:w-full"
+          className="bg-cover grayscale h-96 md:h-auto xl:w-full"
           src={sky}
           alt="sky"
         />
@@ -72,7 +72,7 @@ export default function Episode(props) {
           <img
             src={result.img}
             alt="logo"
-            className="-mt-96 w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
+            className="-mt-96 grayscale w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
           />
           <div className="flex -mt-52 xl:-mt-96 lg:-mt-80 md:-mt-64 xl:-ml-36 lg:ml-16 md:ml-36 justify-self-center">
             <img src={browse} className=" h-4 w-4 rounded-full text-white" />
@@ -158,7 +158,7 @@ export default function Episode(props) {
                                 <img
                                   src={result.img}
                                   alt="logo"
-                                  className="w-1/4 rounded"
+                                  className="w-1/4 grayscale rounded"
                                 />
                                 <span className="ml-4">{result.name}</span>
                               </Dialog.Title>
@@ -247,7 +247,7 @@ export default function Episode(props) {
                         <div className="bg-black px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                           <button
                             type="button"
-                            className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                            className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                             onClick={() => setOpen(false)}
                             ref={cancelButtonRef}
                           >
@@ -270,30 +270,27 @@ export default function Episode(props) {
           </span>
           <div className="flex md:justify-self-center w-80 md:w-auto gap-0.5 md:gap-3 -mt-20 xl:-mt-32 xl:ml-12 lg:-mt-18 lg:ml-64 md:-mt-24 md:ml-72">
             <a
-              href={result.youtube}
-              className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0"
+              className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0 hover:cursor-not-allowed"
             >
-              <img src={youtube} className="h-8 w-8 mt-2 ml-2" />
+              <img src={youtube} className="h-8 grayscale w-8 mt-2 ml-2" />
               &nbsp;&nbsp;
               <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">
                 YouTube
               </span>
             </a>
             <a
-              href={result.googlepodcast}
-              className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0"
+              className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0 hover:cursor-not-allowed"
             >
-              <img src={googlepodcast} className="h-8 w-8 mt-2 ml-2" />
+              <img src={googlepodcast} className="h-8 grayscale w-8 mt-2 ml-2" />
               &nbsp;&nbsp;
               <span className="text-black font-bold text-xs md:text-base mt-3 md:mt-1 hover:text-white">
                 Google Podcasts
               </span>
             </a>
             <a
-              href={result.spotify}
-              className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0"
+              className="flex bg-white h-12 w-32 rounded hover:bg-opacity-0 hover:cursor-not-allowed"
             >
-              <img src={spotify} className="h-8 w-8 mt-2 ml-2" />
+              <img src={spotify} className="h-8 grayscale w-8 mt-2 ml-2" />
               &nbsp;&nbsp;
               <span className="text-black font-bold text-xs md:text-base mt-3 hover:text-white">
                 Spotify
@@ -320,49 +317,37 @@ export default function Episode(props) {
             <br />
             <br />
             <span className="font-normal font-sans text-white lg:text-2xl">
-              You can watch this interview on YouTube
-            </span>
-            &nbsp;
-            <a
-              href={result.youtube}
-              className="font-normal font-sans text-yellow-500 lg:text-2xl"
-            >
-              {result.youtube}
-            </a>
-            <br />
-            <br />
-            <span className="font-normal font-sans text-white lg:text-2xl">
               Follow us on Social Media for the latest show updates
             </span>
             <br />
             <br />
             <a
-              href="https://www.instagram.com/milad_podcast/"
-              className="font-normal font-sans text-yellow-500 lg:text-2xl"
+              href="/"
+              className="font-normal font-sans text-gray-500 lg:text-2xl"
             >
               Instagram
             </a>
             <br />
             <br />
             <a
-              href="https://www.facebook.com/profile.php?id=100089930657614"
-              className="font-normal font-sans text-yellow-500 lg:text-2xl"
+              href="/"
+              className="font-normal font-sans text-gray-500 lg:text-2xl"
             >
               Facebook
             </a>
             <br />
             <br />
             <a
-              href="https://saghiomey.netlify.app"
-              className="font-normal font-sans text-yellow-500 lg:text-2xl"
+              href="/"
+              className="font-normal font-sans text-gray-500 lg:text-2xl"
             >
               SaghiOMey
             </a>
             <br />
             <br />
             <a
-              href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ"
-              className="font-normal font-sans text-yellow-500 lg:text-2xl"
+              href="/"
+              className="font-normal font-sans text-gray-500 lg:text-2xl"
             >
               YouTube
             </a>

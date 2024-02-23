@@ -65,23 +65,15 @@ export default function Footer(lastepisode) {
           <span className="text-gray-300 text-lg font-medium">
             Follow Our Show
             <div className="flex justify-center gap-3 mt-4">
-              <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ">
-                <img src={youtube} className="h-8 w-8" />
-              </a>
-              <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp">
-                <img src={spotify} className="h-8 w-8" />
-              </a>
+                <img src={youtube} className="h-8 w-8 grayscale" />
+                <img src={spotify} className="h-8 w-8 grayscale" />
             </div>
             <div className="flex justify-center mt-4 md:ml-6 gap-3">
-              <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw?ep=14">
                 <img
                   src={googlepodcast}
-                  className="h-8 w-8 rounded-full bg-white"
+                  className="h-8 w-8 grayscale rounded-full bg-white"
                 />
-              </a>
-              <a href="https://castbox.fm/channel/id4931691?country=gb">
-                <img src={castbox} className="h-8 w-8" />
-              </a>
+                <img src={castbox} className="h-8 w-8 grayscale" />
             </div>
           </span>
         </div>
@@ -122,23 +114,15 @@ export default function Footer(lastepisode) {
           <span className="text-gray-300 text-lg font-medium">
             Follow Our Show
             <div className="flex justify-center gap-3 mt-4">
-              <a href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ">
-                <img src={youtube} className="h-8 w-8" />
-              </a>
-              <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp">
-                <img src={spotify} className="h-8 w-8" />
-              </a>
+                <img src={youtube} className="h-8 w-8 grayscale" />
+                <img src={spotify} className="h-8 w-8 grayscale" />
             </div>
             <div className="flex justify-center mt-4 md:ml-6 gap-3">
-              <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw?ep=14">
                 <img
                   src={googlepodcast}
-                  className="h-8 w-8 rounded-full bg-white"
+                  className="h-8 w-8 grayscale rounded-full bg-white"
                 />
-              </a>
-              <a href="https://castbox.fm/channel/id4931691?country=gb">
-                <img src={castbox} className="h-8 w-8" />
-              </a>
+                <img src={castbox} className="h-8 w-8 grayscale" />
             </div>
           </span>
         </div>

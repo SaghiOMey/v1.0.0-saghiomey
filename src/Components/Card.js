@@ -25,7 +25,7 @@ export default function Card(episodes) {
                       <img
                         src={logo}
                         alt={episode.imageAlt}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded"
+                        className="h-full grayscale w-full object-cover object-center lg:h-full lg:w-full rounded"
                       />
                     </div>
                     <div className="mt-4">
@@ -63,7 +63,7 @@ export default function Card(episodes) {
                             &nbsp;{episode.time}
                           </a>
                         </h3>
-                        <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-yellow-500">
+                        <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-gray-300">
                           {episode.name}
                         </p>
                       </div>
@@ -87,7 +87,7 @@ export default function Card(episodes) {
                       <img
                         src={logo}
                         alt={episode.imageAlt}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded"
+                        className="h-full grayscale w-full object-cover object-center lg:h-full lg:w-full rounded"
                       />
                     </div>
                     <div className="mt-4">
@@ -125,7 +125,7 @@ export default function Card(episodes) {
                             &nbsp;{episode.time}
                           </a>
                         </h3>
-                        <p className="mt-8 ml-4 mr-1 font-semibold rwxt-xs md:text-sm lg:text-lg text-yellow-500">
+                        <p className="mt-8 ml-4 mr-1 font-semibold rwxt-xs md:text-sm lg:text-lg text-gray-300">
                           {episode.name}
                         </p>
                       </div>
@@ -153,7 +153,7 @@ export default function Card(episodes) {
                       <img
                         src={episode.img}
                         alt={episode.imageAlt}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded"
+                        className="h-full w-full grayscale object-cover object-center lg:h-full lg:w-full rounded"
                       />
                     </div>
                     <div className="mt-4">
@@ -191,7 +191,7 @@ export default function Card(episodes) {
                             &nbsp;{episode.time}
                           </a>
                         </h3>
-                        <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-yellow-500">
+                        <p className="mt-8 ml-4 mr-1 font-semibold text-lg text-gray-300">
                           {episode.name}
                         </p>
                       </div>
@@ -215,7 +215,7 @@ export default function Card(episodes) {
                       <img
                         src={episode.img}
                         alt={episode.imageAlt}
-                        className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded"
+                        className="h-full grayscale w-full object-cover object-center lg:h-full lg:w-full rounded"
                       />
                     </div>
                     <div className="mt-4">
@@ -253,7 +253,7 @@ export default function Card(episodes) {
                             &nbsp;{episode.time}
                           </a>
                         </h3>
-                        <p className="mt-8 ml-4 mr-1 font-semibold rwxt-xs md:text-sm lg:text-lg text-yellow-500">
+                        <p className="mt-8 ml-4 mr-1 font-semibold rwxt-xs md:text-sm lg:text-lg text-gray-300">
                           {episode.name}
                         </p>
                       </div>
@@ -272,7 +272,7 @@ export default function Card(episodes) {
         <div className="mt-16 md:mr-80">
           <button
             onClick={() => setEp(episodes.episodes.slice(0, ep.length + 9))}
-            class="bg-yellow-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black"
+            class="bg-gray-500 text-white h-12 w-28 lg:w-1/6 lg:h-16 lg:ml-80 md:ml-60 rounded-full hover:bg-white hover:text-black"
           >
             Load More
           </button>

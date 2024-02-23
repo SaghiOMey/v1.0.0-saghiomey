@@ -63,7 +63,7 @@ export default function Persian(props) {
       </Helmet>
       <div className="relative">
         <img
-          className="bg-cover h-96 md:h-auto xl:w-full"
+          className="bg-cover grayscale h-96 md:h-auto xl:w-full"
           src={sky}
           alt="sky"
         />
@@ -71,7 +71,7 @@ export default function Persian(props) {
           <img
             src={result.img}
             alt="logo"
-            className="-mt-96 w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
+            className="-mt-96 grayscale w-40 md:w-1/4 xl:-mt-96 lg:-mt-80 md:-mt-64 md:ml-20 rounded"
           />
 
           <div className="flex -mt-52 xl:-mt-96 lg:-mt-80 md:-mt-64 xl:-ml-36 lg:ml-16 md:ml-36 justify-self-center">

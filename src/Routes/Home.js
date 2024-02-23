@@ -21,7 +21,7 @@ export default function Home(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover xl:w-full" src={Desert} alt="Desert" />
+        <img className="bg-cover grayscale xl:w-full" src={Desert} alt="Desert" />
         <div className="absolute top-44 left-20 lg:top-36 md:top-12 md:left-1/2">
           <div className="font-mono font-bold text-xs md:text-4xl text-white">
             Podcast SaghiOMey{" "}
@@ -36,7 +36,7 @@ export default function Home(props) {
         </div>
         <div className="absolute md:flex md:justify-between top-4 left-20 xl:top-80 lg:top-60 md:top-44">
           <img
-            className="h-40 md:h-1/4 md:w-1/4 rounded"
+            className="h-40 grayscale md:h-1/4 md:w-1/4 rounded"
             src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded/22745765/22745765-1673944612760-1d57f610e6e73.jpg"
             alt="logo"
           />
@@ -48,7 +48,7 @@ export default function Home(props) {
               <br />
               <button
                 onClick={() => setOpen(true)}
-                class="bg-white text-black w-36 h-8 lg:w-3/12 md:w-40 md:h-8 lg:w-60 lg:h-16 lg:ml-80 md:ml-32 rounded-full hover:bg-yellow-500 hover:text-white"
+                class="bg-white text-black w-36 h-8 lg:w-3/12 md:w-40 md:h-8 lg:w-60 lg:h-16 lg:ml-80 md:ml-32 rounded-full hover:bg-gray-500 hover:text-white"
               >
                 Subscribe to Podcast
               </button>
@@ -95,30 +95,30 @@ export default function Home(props) {
                                 <div className="mt-2">
                                   <p className="text-sm text-gray-500">
                                     <div className="flex mt-4 ml-6 justify-between">
-                                      <a href="https://www.youtube.com/@Saghiomey?sub_confirmation=1">
+                                      {/* <a href="https://www.youtube.com/@Saghiomey?sub_confirmation=1"> */}
                                         <img
                                           src={youtube}
-                                          className="h-12 w-12 rounded-full"
+                                          className="h-12 w-12 grayscale rounded-full"
                                         />
-                                      </a>
-                                      <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d">
+                                      {/* </a> */}
+                                      {/* <a href="https://open.spotify.com/show/6ObUzf2m0OtJNyVvNvwIVp?si=154b0c011ccf4c4d"> */}
                                         <img
                                           src={spotify}
-                                          className="h-12 w-12"
+                                          className="h-12 grayscale w-12"
                                         />
-                                      </a>
-                                      <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw%3D%3D">
+                                      {/* </a> */}
+                                      {/* <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODJiZGVmNC9wb2RjYXN0L3Jzcw%3D%3D"> */}
                                         <img
                                           src={googlepodcast}
-                                          className="h-12 w-12"
+                                          className="h-12 grayscale w-12"
                                         />
-                                      </a>
-                                      <a href="https://castbox.fm/channel/Saghi.O.Mey-%7C%7C-%D8%B3%D8%A7%D9%82%DB%8C-%D9%88-%D9%85%DB%8C-id4931691?country=gb">
+                                      {/* </a> */}
+                                      {/* <a href="https://castbox.fm/channel/Saghi.O.Mey-%7C%7C-%D8%B3%D8%A7%D9%82%DB%8C-%D9%88-%D9%85%DB%8C-id4931691?country=gb"> */}
                                         <img
                                           src={castbox}
-                                          className="h-12 w-12"
+                                          className="h-12 grayscale w-12"
                                         />
-                                      </a>
+                                      {/* </a> */}
                                     </div>
                                   </p>
                                 </div>
@@ -128,7 +128,7 @@ export default function Home(props) {
                           <div className="bg-black px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                             <button
                               type="button"
-                              className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                              className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                               onClick={() => setOpen(false)}
                               ref={cancelButtonRef}
                             >
@@ -147,7 +147,7 @@ export default function Home(props) {
               <p className="font-mono flex font-bold lg:ml-56 lg:text-lg text-gray-100">
                 Follow US: &nbsp;
                 <a
-                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
+                  className="text-gray-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="https://www.facebook.com/profile.php?id=100089930657614"
                 >
                   <svg
@@ -160,7 +160,7 @@ export default function Home(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
+                  className="text-gray-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ"
                 >
                   <svg
@@ -173,7 +173,7 @@ export default function Home(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
+                  className="text-gray-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="https://www.instagram.com/milad_podcast/"
                 >
                   <svg
@@ -186,7 +186,7 @@ export default function Home(props) {
                   </svg>
                 </a>
                 <a
-                  className="text-yellow-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
+                  className="text-gray-500 ml-4 md:ml-8 lg:ml-8 hover:text-white fill-current"
                   href="https://www.linkedin.com/in/mohammadreza-khorrami-238302215/"
                 >
                   <svg
@@ -202,7 +202,7 @@ export default function Home(props) {
               <p className="font-mono flex font-bold mt-4 lg:ml-80 lg:mt-8 lg:text-lg text-gray-100">
                 Reviews: &nbsp;
                 <NavLink
-                  className="text-yellow-500 mt-1 flex hover:text-white fill-current"
+                  className="text-gray-500 mt-1 flex hover:text-white fill-current"
                   to="Reviews"
                 >
                   <svg

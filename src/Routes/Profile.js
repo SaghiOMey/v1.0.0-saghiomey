@@ -11,7 +11,7 @@ export default function Profile(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover xl:w-full" src={Desert} alt="Desert" />
+        <img className="bg-cover grayscale xl:w-full" src={Desert} alt="Desert" />
         <div className="absolute md:flex md:justify-between top-4 left-12 xl:top-80 lg:top-60 md:top-44">
           <img
             className="h-40 md:h-2/6 md:w-2/6 rounded"
@@ -46,32 +46,32 @@ export default function Profile(props) {
               <br />
               <br />
               <a
-                href="https://www.instagram.com/milad_podcast/"
-                className="font-normal font-sans text-yellow-500 text-2xl"
+                href="/"
+                className="font-normal font-sans text-gray-500 text-2xl"
               >
                 Instagram
               </a>
               <br />
               <br />
               <a
-                href="https://www.facebook.com/profile.php?id=100089930657614"
-                className="font-normal font-sans text-yellow-500 text-2xl"
+                href="/"
+                className="font-normal font-sans text-gray-500 text-2xl"
               >
                 Facebook
               </a>
               <br />
               <br />
               <a
-                href="https://saghiomey.netlify.app"
-                className="font-normal font-sans text-yellow-500 text-2xl"
+                href="/"
+                className="font-normal font-sans text-gray-500 text-2xl"
               >
                 SaghiOMey
               </a>
               <br />
               <br />
               <a
-                href="https://www.youtube.com/channel/UCCsIc3DO4eWMO2TlyRxxQSQ"
-                className="font-normal font-sans text-yellow-500 text-2xl"
+                href="/"
+                className="font-normal font-sans text-gray-500 text-2xl"
               >
                 YouTube
               </a>

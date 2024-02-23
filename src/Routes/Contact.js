@@ -9,7 +9,7 @@ export default function Contact(props) {
   return (
     <>
       <div className="relative">
-        <img className="bg-cover xl:w-full" src={nightsky} alt="nightsky" />
+        <img className="bg-cover grayscale xl:w-full" src={nightsky} alt="nightsky" />
         <div className="absolute grid justify-items-center top-8 md:top-28 w-full text-white">
           <span className="text-lg md:text-5xl font-sans font-bold">
             Contact Us
@@ -63,7 +63,7 @@ export default function Contact(props) {
                 <button
                   type="submit"
                   disabled
-                  className="bg-yellow-500 text-white w-32 h-16 rounded-full hover:bg-white hover:text-black"
+                  className="bg-gray-500 cursor-not-allowed text-white w-32 h-16 rounded-full hover:bg-white hover:text-black"
                 >
                   Submit
                 </button>

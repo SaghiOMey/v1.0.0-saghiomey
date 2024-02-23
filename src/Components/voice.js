@@ -41,7 +41,7 @@ export default function Voice() {
                     <div className="sm:flex sm:items-start">
                       <div className="mt-3 text-center sm:mt-0 sm:ml-4">
                         <h3
-                          className="text-lg font-medium leading-6 text-gray-900"
+                          className="text-lg font-medium leading-6 cursor-not-allowed text-gray-500"
                           id="modal-title"
                         >
                           Send voice message
@@ -67,7 +67,7 @@ export default function Voice() {
                       disabled
                       type="submit"
                       value="Send"
-                      className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                      className="inline-flex w-full justify-center rounded-md border border-transparent bg-gray-500 px-4 py-2 text-base font-medium text-white shadow-sm cursor-not-allowed sm:ml-3 sm:w-auto sm:text-sm"
                     >
                       Send voice message
                     </button>
