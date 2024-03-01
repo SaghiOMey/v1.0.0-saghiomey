@@ -18,7 +18,7 @@ export default function NFT(props) {
         id: 1,
         name: "The first cover of Saghi.O.May podcast",
         describtion:
-          "The first cover of Saghi.O.May podcast, which was unveiled in 2021, also 10% of sales goes to charity",
+          "The first cover of Saghi.O.May podcast, which was unveiled in 2022, also 10% of sales goes to charity",
         price: "0.0125 WETH, $20.45",
         creator: "Milad",
         img: "https://i.seadn.io/gcs/files/824a750c60cecdae055fe3a29704235d.png?auto=format&w=1000",
@@ -32,7 +32,7 @@ export default function NFT(props) {
         id: 1,
         name: "The first episode of Saghi.O.May podcast",
         describtion:
-          "The first episode of Saghi.O.May podcast, which was unveiled in 2021, also 10% of sales goes to charity",
+          "The first episode of Saghi.O.May podcast, which was unveiled in 2022, also 10% of sales goes to charity",
         price: "0.0125 WETH, $20.45",
         creator: "Milad",
         img: "https://i.seadn.io/gcs/files/3e83fe2a43a75496bc263080d4adc95a.png?auto=format&w=1000",
@@ -46,7 +46,7 @@ export default function NFT(props) {
         id: 1,
         name: "The first video of Saghi.O.May podcast",
         describtion:
-          "The first video of Saghi.O.May podcast, which was unveiled in 2021, also 10% of sales goes to charity",
+          "The first video of Saghi.O.May podcast, which was unveiled in 2022, also 10% of sales goes to charity",
         price: "0.0125 WETH, $20.45",
         creator: "Milad",
         img: "https://i.seadn.io/gcs/files/3e83fe2a43a75496bc263080d4adc95a.png?auto=format&w=1000",
