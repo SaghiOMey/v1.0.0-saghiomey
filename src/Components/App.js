@@ -15,12 +15,12 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>SaghiOMey</title>
-        <meta property="og:title" key="og:title" content="SaghiOMey" />
+        <title>v1-0-0.SaghiOMey</title>
+        <meta property="og:title" key="og:title" content="v1-0-0.SaghiOMey" />
         <meta
           property="og:description"
           key="og:description"
-          content="Podcast SaghiOMey"
+          content="Podcast SaghiOMey v1-0-0"
         />
         <meta property="og:image" key="og:image" content={ico} />
       </Helmet>
